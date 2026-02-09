@@ -77,7 +77,7 @@ function renderTarget(outDir: string, target: TargetResult): string {
 
   const findingRows = target.findings.length
     ? target.findings.map(renderFindingRow).join("\n")
-    : '<tr><td colspan="7" class="muted">No findings.</td></tr>';
+    : '<tr><td colspan="8" class="muted">No findings.</td></tr>';
 
   const manualRows = target.manualChecks.length
     ? target.manualChecks
@@ -106,7 +106,7 @@ function renderTarget(outDir: string, target: TargetResult): string {
     ${screenshot}
     <h3>Findings</h3>
     <table>
-      <thead><tr><th>Severity</th><th>Status</th><th>Rule</th><th>Criterion</th><th>Layer Path</th><th>Message</th><th>Evidence</th></tr></thead>
+      <thead><tr><th>Severity</th><th>Status</th><th>Rule</th><th>Criterion</th><th>Layer Path</th><th>Message</th><th>Recommendation</th><th>Evidence</th></tr></thead>
       <tbody>${findingRows}</tbody>
     </table>
     <h3>Manual Checklist</h3>
@@ -145,6 +145,7 @@ function renderFindingRow(finding: Finding): string {
     <td>${escapeHtml(finding.wcagCriterion)}</td>
     <td>${escapeHtml(finding.targetRef.layerPath ?? finding.targetRef.frameName)}</td>
     <td>${escapeHtml(finding.message)}</td>
+    <td>${escapeHtml(finding.recommendation ?? "-")}</td>
     <td>${escapeHtml(finding.evidence ?? "-")}</td>
   </tr>`;
 }

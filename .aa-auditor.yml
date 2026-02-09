@@ -18,4 +18,10 @@ rules:
   WCAG-2.5.8-target-size-minimum:
     enabled: true
     severity: blocker
+designSystemColors: {}
+# Optional overrides/additions to Figma variable colors (hex values), for example:
+# designSystemColors:
+#   text.primary: "#1F2937"
+#   text.inverse: "#FFFFFF"
+#   border.default: "#CBD5E1"
 suppressions: []

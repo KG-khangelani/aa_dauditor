@@ -2,6 +2,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { FigmaClient, FigmaTargetPayload } from "../core/types.js";
 import { parseFigmaUrl } from "./url.js";
+import { extractDesignSystemColorsFromVariableDefs } from "./variable-colors.js";
 
 interface JsonRpcResult {
   jsonrpc: "2.0";
@@ -81,6 +82,15 @@ export class RemoteFigmaMcpClient implements FigmaClient {
       },
     );
 
+    const variableDefs = await this.callToolWithFallback("get_variable_defs", parsed).catch(
+      (err) => {
+        warnings.push(`Variable definitions fetch failed: ${(err as Error).message}`);
+        return undefined;
+      },
+    );
+
+    const designSystemColors = extractDesignSystemColorsFromVariableDefs(variableDefs);
+
     const screenshot = await parseScreenshotPayload(screenshotPayload, warnings);
 
     const frameName =
@@ -94,6 +104,7 @@ export class RemoteFigmaMcpClient implements FigmaClient {
       frameName,
       designContext,
       metadata,
+      designSystemColors,
       screenshot,
       warnings,
     };

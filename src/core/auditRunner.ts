@@ -39,6 +39,10 @@ export async function runAudit(
     try {
       const payload = await deps.figmaClient.fetchTarget(target.figmaUrl);
       const normalized = normalizeTarget(payload);
+      const designSystemColors = {
+        ...(payload.designSystemColors ?? {}),
+        ...options.config.designSystemColors,
+      };
 
       let screenshotPath: string | undefined;
       if (options.config.report.includeScreenshots) {
@@ -57,6 +61,7 @@ export async function runAudit(
         {
           target: normalized,
           reportStartIso: startedAt,
+          designSystemColors,
         },
         enabledRules,
       );

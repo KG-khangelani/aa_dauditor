@@ -23,6 +23,7 @@ export interface Finding {
   severity: Severity;
   status: FindingStatus;
   message: string;
+  recommendation?: string;
   evidence?: string;
   targetRef: {
     figmaUrl: string;
@@ -117,6 +118,7 @@ export interface NormalizedTarget {
 export interface RuleEvaluationContext {
   target: NormalizedTarget;
   reportStartIso: string;
+  designSystemColors?: Record<string, string>;
 }
 
 export interface RuleDefinition {
@@ -143,6 +145,7 @@ export interface AppConfig {
   };
   rules: Record<string, RuleConfig>;
   suppressions: Suppression[];
+  designSystemColors: Record<string, string>;
 }
 
 export interface AuditTargetInput {
@@ -155,6 +158,7 @@ export interface FigmaTargetPayload {
   frameName: string;
   designContext: unknown;
   metadata?: unknown;
+  designSystemColors?: Record<string, string>;
   screenshot?: {
     bytes?: Uint8Array;
     ext?: "png" | "jpg" | "jpeg" | "webp";

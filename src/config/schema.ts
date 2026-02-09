@@ -1,5 +1,6 @@
 import { RULE_CATALOG } from "../core/ruleCatalog.js";
 import type { AppConfig, RuleConfig, Severity, Suppression } from "../core/types.js";
+import { isValidHexColor } from "../rules/recommend-color.js";
 
 const VALID_SEVERITIES: Severity[] = ["blocker", "critical", "major", "minor"];
 
@@ -23,6 +24,7 @@ export const DEFAULT_CONFIG: AppConfig = {
   },
   rules: DEFAULT_RULES,
   suppressions: [],
+  designSystemColors: {},
 };
 
 export function createDefaultConfigYaml(): string {
@@ -43,6 +45,7 @@ export function createDefaultConfigYaml(): string {
       "    enabled: true",
       `    severity: ${rule.defaultSeverity}`,
     ]),
+    "designSystemColors: {}",
     "suppressions: []",
     "",
   ].join("\n");
@@ -77,6 +80,7 @@ export function validateAndNormalizeConfig(input: unknown): AppConfig {
 
   const rules = normalizeRules(input.rules);
   const suppressions = normalizeSuppressions(input.suppressions);
+  const designSystemColors = normalizeDesignSystemColors(input.designSystemColors);
 
   return {
     wcagVersion,
@@ -88,7 +92,37 @@ export function validateAndNormalizeConfig(input: unknown): AppConfig {
     },
     rules,
     suppressions,
+    designSystemColors,
   };
+}
+
+function normalizeDesignSystemColors(value: unknown): Record<string, string> {
+  if (value === undefined) {
+    return {};
+  }
+
+  if (!isObject(value)) {
+    throw new Error("designSystemColors must be an object of token->hex color.");
+  }
+
+  const out: Record<string, string> = {};
+  for (const [token, raw] of Object.entries(value)) {
+    const tokenName = token.trim();
+    if (!tokenName) {
+      throw new Error("designSystemColors contains an empty token name.");
+    }
+    if (typeof raw !== "string" || raw.trim() === "") {
+      throw new Error(`designSystemColors.${tokenName} must be a non-empty hex string.`);
+    }
+    if (!isValidHexColor(raw)) {
+      throw new Error(
+        `designSystemColors.${tokenName} must be a valid hex color (#RGB, #RGBA, #RRGGBB, or #RRGGBBAA).`,
+      );
+    }
+    out[tokenName] = raw.trim();
+  }
+
+  return out;
 }
 
 function normalizeRules(value: unknown): Record<string, RuleConfig> {

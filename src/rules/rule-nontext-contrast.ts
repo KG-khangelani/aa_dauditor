@@ -8,6 +8,10 @@ import {
   layerPathForNode,
   likelyNonTextContrastNodes,
 } from "../normalize/query.js";
+import {
+  recommendDesignSystemColorsForContrast,
+  recommendTokensForManualColorReview,
+} from "./recommend-color.js";
 
 const RULE_ID = "WCAG-1.4.11-nontext-contrast";
 
@@ -38,6 +42,9 @@ function evaluateNonTextContrast(ctx: RuleEvaluationContext): Finding[] {
         status: "needs-manual-review",
         message:
           "Could not reliably determine non-text foreground/background colors.",
+        recommendation: recommendTokensForManualColorReview(
+          ctx.designSystemColors,
+        ),
         evidence: `Node ${node.id} (${node.name})`,
         targetRef: {
           figmaUrl: ctx.target.figmaUrl,
@@ -62,6 +69,12 @@ function evaluateNonTextContrast(ctx: RuleEvaluationContext): Finding[] {
       severity: "major",
       status: "failed",
       message: `Non-text contrast ratio ${ratio.toFixed(2)}:1 is below required 3.0:1.`,
+      recommendation: recommendDesignSystemColorsForContrast(
+        ctx.designSystemColors,
+        fg,
+        bg,
+        3,
+      ),
       evidence: [
         `Node ${node.id} (${node.name})`,
         `foreground=${colorToString(fg)}`,

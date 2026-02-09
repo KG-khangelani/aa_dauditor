@@ -7,6 +7,10 @@ import {
   layerPathForNode,
   likelyTextNodes,
 } from "../normalize/query.js";
+import {
+  recommendDesignSystemColorsForContrast,
+  recommendTokensForManualColorReview,
+} from "./recommend-color.js";
 
 const RULE_ID = "WCAG-1.4.3-text-contrast-minimum";
 
@@ -37,6 +41,9 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
         status: "needs-manual-review",
         message:
           "Could not reliably determine text/background colors for contrast calculation.",
+        recommendation: recommendTokensForManualColorReview(
+          ctx.designSystemColors,
+        ),
         evidence: `Node ${node.id} (${node.name})`,
         targetRef: {
           figmaUrl: ctx.target.figmaUrl,
@@ -70,6 +77,12 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
       message: `Text contrast ratio ${ratio.toFixed(2)}:1 is below required ${threshold.toFixed(
         1,
       )}:1.`,
+      recommendation: recommendDesignSystemColorsForContrast(
+        ctx.designSystemColors,
+        fg,
+        bg,
+        threshold,
+      ),
       evidence: [
         `Node ${node.id} (${node.name})`,
         `textColor=${colorToString(fg)}`,

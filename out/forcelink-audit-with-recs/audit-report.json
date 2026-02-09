@@ -1,7 +1,7 @@
 {
-  "runId": "0517eec1-04a0-4d70-a045-d64c7155d524",
-  "startedAt": "2026-02-09T13:06:35.521Z",
-  "finishedAt": "2026-02-09T13:06:37.264Z",
+  "runId": "4933f482-a45b-449f-a89d-eef2be6a2054",
+  "startedAt": "2026-02-09T12:17:29.625Z",
+  "finishedAt": "2026-02-09T12:17:31.049Z",
   "wcagVersion": "2.2",
   "level": "AA",
   "summary": {
@@ -23,7 +23,7 @@
       "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
       "nodeId": "26027:42977",
       "frameName": "Figma Node 26027:42977",
-      "screenshotPath": "/Users/khangelani/Documents/aa_dauditor/out/forcelink-audit/assets/26027_42977.png",
+      "screenshotPath": "/Users/khangelani/Documents/aa_dauditor/out/forcelink-audit-with-recs/assets/26027_42977.png",
       "findings": [
         {
           "id": "68de2735920d",
@@ -197,7 +197,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:42992 (Terrain)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -213,7 +212,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:42997 (Satellite)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -229,7 +227,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43002 (Default)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -245,7 +242,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43014 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -261,7 +257,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43015 (Location Stack)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -277,7 +272,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43022 (Resources)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -293,7 +287,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43027 (1 items)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -309,7 +302,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43072 (Resource Page)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -325,7 +317,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43073 (RS00091)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -341,7 +332,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43074 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -357,7 +347,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43157 (Full Name)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -373,7 +362,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43160 (Angel Jili)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -389,7 +377,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43162 (Mobile Number)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -405,7 +392,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43163 (0724418827)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -421,7 +407,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43165 (Email)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -437,7 +422,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43166 (angeljili@sappi.net)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -453,7 +437,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43168 (Manager)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -469,7 +452,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43169 (Allen Mhatu)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -485,7 +467,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43171 (Employer)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -501,7 +482,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:43172 (Sappi Khulisa)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -517,7 +497,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:45553 (RS00091)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -533,7 +512,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26027:45670 (Guides)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -549,7 +527,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26056:39773 (Satellite)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -565,7 +542,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26056:39776 (Satellite)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -581,7 +557,6 @@
           "severity": "critical",
           "status": "needs-manual-review",
           "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
           "evidence": "Node 26056:39779 (Satellite)",
           "targetRef": {
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -824,7 +799,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:42992 (Terrain)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -840,7 +814,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:42997 (Satellite)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -856,7 +829,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43002 (Default)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -872,7 +844,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43014 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -888,7 +859,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43015 (Location Stack)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -904,7 +874,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43022 (Resources)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -920,7 +889,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43027 (1 items)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -936,7 +904,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43072 (Resource Page)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -952,7 +919,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43073 (RS00091)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -968,7 +934,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43074 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -984,7 +949,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43157 (Full Name)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1000,7 +964,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43160 (Angel Jili)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1016,7 +979,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43162 (Mobile Number)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1032,7 +994,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43163 (0724418827)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1048,7 +1009,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43165 (Email)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1064,7 +1024,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43166 (angeljili@sappi.net)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1080,7 +1039,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43168 (Manager)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1096,7 +1054,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43169 (Allen Mhatu)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1112,7 +1069,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43171 (Employer)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1128,7 +1084,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:43172 (Sappi Khulisa)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1144,7 +1099,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:45553 (RS00091)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1160,7 +1114,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26027:45670 (Guides)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1176,7 +1129,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26056:39773 (Satellite)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1192,7 +1144,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26056:39776 (Satellite)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
@@ -1208,7 +1159,6 @@
       "severity": "critical",
       "status": "needs-manual-review",
       "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); color (#BFBFBF); Neutral Color Palette/grey-2 (#F1F1F1); Neutral Color Palette/grey-4 (#D4D4D3); Neutral Color Palette/grey-5 (#ADADAC).",
       "evidence": "Node 26056:39779 (Satellite)",
       "targetRef": {
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",

@@ -11,6 +11,7 @@ test("config applies defaults and validates shape", () => {
   assert.equal(config.report.includeScreenshots, true);
   assert.deepEqual(config.report.formats, ["json", "html"]);
   assert.equal(config.rules["WCAG-2.5.8-target-size-minimum"].enabled, true);
+  assert.deepEqual(config.designSystemColors, {});
 });
 
 test("config rejects invalid severity", () => {
@@ -20,5 +21,27 @@ test("config rejects invalid severity", () => {
         failOn: ["sev0"],
       }),
     /must be one of/,
+  );
+});
+
+test("config validates design system hex colors", () => {
+  const config = validateAndNormalizeConfig({
+    designSystemColors: {
+      "text.primary": "#1F2937",
+      "text.inverse": "#FFF",
+    },
+  });
+
+  assert.equal(config.designSystemColors["text.primary"], "#1F2937");
+  assert.equal(config.designSystemColors["text.inverse"], "#FFF");
+
+  assert.throws(
+    () =>
+      validateAndNormalizeConfig({
+        designSystemColors: {
+          bad: "blue",
+        },
+      }),
+    /valid hex color/,
   );
 });

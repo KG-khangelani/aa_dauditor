@@ -5,6 +5,7 @@
 ## Features
 
 - Figma MCP-backed input (`get_design_context`, metadata fallback, `get_screenshot`)
+- Auto-import of Figma design-system color variables (`get_variable_defs`) for contrast recommendations
 - Automated checks:
   - `WCAG-1.4.3-text-contrast-minimum`
   - `WCAG-1.4.11-nontext-contrast`
@@ -62,6 +63,23 @@ node dist/src/cli.js audit \
 - JSON: `out/audit-report.json`
 - HTML: `out/audit-report.html`
 - Assets: `out/assets/*` when screenshot bytes are available
+
+### Design-system color recommendations
+
+For color contrast findings, the auditor recommends passing tokens from your design system.
+
+By default, it pulls color variables from Figma via `get_variable_defs`.
+
+You can also define or override tokens in `.aa-auditor.yml`:
+
+```yaml
+designSystemColors:
+  text.primary: "#1F2937"
+  text.inverse: "#FFFFFF"
+  border.default: "#CBD5E1"
+```
+
+When a text/non-text contrast rule fails, the report includes suggested tokens that satisfy the required contrast ratio against the detected background.
 
 ### Exit codes
 
