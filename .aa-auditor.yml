@@ -1,0 +1,21 @@
+wcagVersion: "2.2"
+level: "AA"
+failOn:
+  - blocker
+  - critical
+report:
+  includeScreenshots: true
+  formats:
+    - json
+    - html
+rules:
+  WCAG-1.4.3-text-contrast-minimum:
+    enabled: true
+    severity: critical
+  WCAG-1.4.11-nontext-contrast:
+    enabled: true
+    severity: major
+  WCAG-2.5.8-target-size-minimum:
+    enabled: true
+    severity: blocker
+suppressions: []

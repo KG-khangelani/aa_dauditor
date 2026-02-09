@@ -1,0 +1,1288 @@
+{
+  "runId": "5ad72684-7d66-409a-b2f5-b79d6bddbb86",
+  "startedAt": "2026-02-09T12:01:04.289Z",
+  "finishedAt": "2026-02-09T12:01:06.159Z",
+  "wcagVersion": "2.2",
+  "level": "AA",
+  "summary": {
+    "totalTargets": 1,
+    "totalFindings": 38,
+    "suppressedFindings": 0,
+    "manualReviewFindings": 26,
+    "bySeverity": {
+      "blocker": 12,
+      "critical": 0,
+      "major": 0,
+      "minor": 0
+    },
+    "failedTargets": 1,
+    "warnings": []
+  },
+  "targets": [
+    {
+      "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+      "nodeId": "26027:42977",
+      "frameName": "Figma Node 26027:42977",
+      "screenshotPath": "/Users/khangelani/Documents/aa_dauditor/out/forcelink-audit/assets/26027_42977.png",
+      "findings": [
+        {
+          "id": "68de2735920d",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42978 (Component 17 – 280)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42978",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 280"
+          }
+        },
+        {
+          "id": "886b6cbf2d80",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42979 (Component 17 – 293)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42979",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 293"
+          }
+        },
+        {
+          "id": "53c84007804c",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42980 (Component 17 – 285)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42980",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 285"
+          }
+        },
+        {
+          "id": "a8208379249a",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42982 (Component 17 – 286)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42982",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 286"
+          }
+        },
+        {
+          "id": "b8fdc931a276",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42983 (Component 17 – 287)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42983",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 287"
+          }
+        },
+        {
+          "id": "ee406c968ecd",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42984 (Component 17 – 288)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42984",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 288"
+          }
+        },
+        {
+          "id": "f41c90e355a7",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42985 (Component 17 – 289)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42985",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 289"
+          }
+        },
+        {
+          "id": "18d2f54d0d77",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42986 (Component 17 – 284)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42986",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 284"
+          }
+        },
+        {
+          "id": "8d55c76ce311",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 40.0x22.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42990 (Rectangle 684)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42990",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 3845 > Group 3819 > Rectangle 684"
+          }
+        },
+        {
+          "id": "c0f65acb3ee1",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 40.0x22.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:42995 (Rectangle 684)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42995",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4005 > Group 3819 > Rectangle 684"
+          }
+        },
+        {
+          "id": "36dce1196cd9",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 40.0x22.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:43000 (Rectangle 684)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43000",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4004 > Group 3819 > Rectangle 684"
+          }
+        },
+        {
+          "id": "b5c84fb6aac0",
+          "ruleId": "WCAG-2.5.8-target-size-minimum",
+          "wcagCriterion": "2.5.8",
+          "severity": "blocker",
+          "status": "failed",
+          "message": "Interactive target is 64.0x21.0px; minimum is 24x24px.",
+          "evidence": "Node 26027:45556 (Rectangle 637)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:45556",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > Rectangle 637"
+          }
+        },
+        {
+          "id": "72b5f7c61c95",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:42992 (Terrain)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42992",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 3845 > Terrain"
+          }
+        },
+        {
+          "id": "e233cae22223",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:42997 (Satellite)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42997",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4005 > Satellite"
+          }
+        },
+        {
+          "id": "1f84564ab9ee",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43002 (Default)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43002",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4004 > Default"
+          }
+        },
+        {
+          "id": "5969fda1962f",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43014 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43014",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Location Info > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+          }
+        },
+        {
+          "id": "6652587ed268",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43015 (Location Stack)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43015",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Location Info > Location Stack"
+          }
+        },
+        {
+          "id": "f910c5111cfc",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43022 (Resources)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43022",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Location Info > Location Details > Location Header > Location Title > Location Title > Resources"
+          }
+        },
+        {
+          "id": "857d802d2dbe",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43027 (1 items)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43027",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Location Info > Location Details > Location Header > Location Title > Location Title > Item Count Container > Item Count Container > 1 items"
+          }
+        },
+        {
+          "id": "505583454e14",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43072 (Resource Page)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43072",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Group 4022 > Group 3892 > Resource Page"
+          }
+        },
+        {
+          "id": "fc3ca97bf43d",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43073 (RS00091)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43073",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > RS00091"
+          }
+        },
+        {
+          "id": "afbfdd7b3640",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43074 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43074",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+          }
+        },
+        {
+          "id": "ac7950b7ab10",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43157 (Full Name)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43157",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Full Name"
+          }
+        },
+        {
+          "id": "421f6b13a8bf",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43160 (Angel Jili)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43160",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Frame 15813 > Angel Jili"
+          }
+        },
+        {
+          "id": "359d2a5f2f03",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43162 (Mobile Number)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43162",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Mobile Number"
+          }
+        },
+        {
+          "id": "73697c721b57",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43163 (0724418827)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43163",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > 0724418827"
+          }
+        },
+        {
+          "id": "c1f1cc46be3a",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43165 (Email)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43165",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Email"
+          }
+        },
+        {
+          "id": "9a357bac66be",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43166 (angeljili@sappi.net)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43166",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > angeljili@sappi.net"
+          }
+        },
+        {
+          "id": "4d0c84b7d97e",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43168 (Manager)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43168",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Manager"
+          }
+        },
+        {
+          "id": "515d686f45df",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43169 (Allen Mhatu)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43169",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Allen Mhatu"
+          }
+        },
+        {
+          "id": "8e5ff832249c",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43171 (Employer)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43171",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Employer"
+          }
+        },
+        {
+          "id": "f68aef3e8616",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:43172 (Sappi Khulisa)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:43172",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Sappi Khulisa"
+          }
+        },
+        {
+          "id": "557b5ebe9b9c",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:45553 (RS00091)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:45553",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > RS00091"
+          }
+        },
+        {
+          "id": "7069e767a19c",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:45557 (5 items)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:45557",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > 5 items"
+          }
+        },
+        {
+          "id": "e5d8048c03bc",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26027:45670 (Guides)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:45670",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 15859 > Frame 15856 > Guides"
+          }
+        },
+        {
+          "id": "94d14b3230bf",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26056:39773 (Satellite)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26056:39773",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 32 > Frame 4007 > Satellite"
+          }
+        },
+        {
+          "id": "a08df682faa0",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26056:39776 (Satellite)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26056:39776",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 32 > Frame 4005 > Satellite"
+          }
+        },
+        {
+          "id": "220fd5223b6b",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation.",
+          "evidence": "Node 26056:39779 (Satellite)",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26056:39779",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Work Map - Individual Selection – 11 > Component 32 > Frame 4006 > Satellite"
+          }
+        }
+      ],
+      "manualChecks": [
+        {
+          "id": "571c6ea66527",
+          "wcagCriterion": "1.3.1",
+          "prompt": "Verify structure and relationships are programmatically determinable (headings, grouped controls, labels).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42977",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Figma Node 26027:42977"
+          }
+        },
+        {
+          "id": "9664d6a99623",
+          "wcagCriterion": "1.4.1",
+          "prompt": "Verify color is not the only means used to convey state or meaning.",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42977",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Figma Node 26027:42977"
+          }
+        },
+        {
+          "id": "63734e84aa67",
+          "wcagCriterion": "2.4.7",
+          "prompt": "Verify focus indicators are clearly visible for all interactive components.",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42977",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Figma Node 26027:42977"
+          }
+        },
+        {
+          "id": "8606521484f6",
+          "wcagCriterion": "2.4.11",
+          "prompt": "Verify focused elements are not fully obscured by fixed/sticky UI.",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42977",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Figma Node 26027:42977"
+          }
+        },
+        {
+          "id": "c5949ead72cd",
+          "wcagCriterion": "3.3.2",
+          "prompt": "Verify form controls include persistent labels/instructions and clear error guidance.",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+            "nodeId": "26027:42977",
+            "frameName": "Figma Node 26027:42977",
+            "layerPath": "Figma Node 26027:42977"
+          }
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "68de2735920d",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42978 (Component 17 – 280)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42978",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 280"
+      }
+    },
+    {
+      "id": "886b6cbf2d80",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42979 (Component 17 – 293)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42979",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 293"
+      }
+    },
+    {
+      "id": "53c84007804c",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42980 (Component 17 – 285)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42980",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 285"
+      }
+    },
+    {
+      "id": "a8208379249a",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42982 (Component 17 – 286)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42982",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 286"
+      }
+    },
+    {
+      "id": "b8fdc931a276",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42983 (Component 17 – 287)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42983",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 287"
+      }
+    },
+    {
+      "id": "ee406c968ecd",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42984 (Component 17 – 288)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42984",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 288"
+      }
+    },
+    {
+      "id": "f41c90e355a7",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42985 (Component 17 – 289)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42985",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 289"
+      }
+    },
+    {
+      "id": "18d2f54d0d77",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 18.0x18.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42986 (Component 17 – 284)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42986",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 17 – 284"
+      }
+    },
+    {
+      "id": "8d55c76ce311",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 40.0x22.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42990 (Rectangle 684)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42990",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 3845 > Group 3819 > Rectangle 684"
+      }
+    },
+    {
+      "id": "c0f65acb3ee1",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 40.0x22.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:42995 (Rectangle 684)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42995",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4005 > Group 3819 > Rectangle 684"
+      }
+    },
+    {
+      "id": "36dce1196cd9",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 40.0x22.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:43000 (Rectangle 684)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43000",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4004 > Group 3819 > Rectangle 684"
+      }
+    },
+    {
+      "id": "b5c84fb6aac0",
+      "ruleId": "WCAG-2.5.8-target-size-minimum",
+      "wcagCriterion": "2.5.8",
+      "severity": "blocker",
+      "status": "failed",
+      "message": "Interactive target is 64.0x21.0px; minimum is 24x24px.",
+      "evidence": "Node 26027:45556 (Rectangle 637)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:45556",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > Rectangle 637"
+      }
+    },
+    {
+      "id": "72b5f7c61c95",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:42992 (Terrain)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42992",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 3845 > Terrain"
+      }
+    },
+    {
+      "id": "e233cae22223",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:42997 (Satellite)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42997",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4005 > Satellite"
+      }
+    },
+    {
+      "id": "1f84564ab9ee",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43002 (Default)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43002",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4004 > Default"
+      }
+    },
+    {
+      "id": "5969fda1962f",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43014 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43014",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Location Info > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+      }
+    },
+    {
+      "id": "6652587ed268",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43015 (Location Stack)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43015",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Location Info > Location Stack"
+      }
+    },
+    {
+      "id": "f910c5111cfc",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43022 (Resources)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43022",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Location Info > Location Details > Location Header > Location Title > Location Title > Resources"
+      }
+    },
+    {
+      "id": "857d802d2dbe",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43027 (1 items)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43027",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Location Info > Location Details > Location Header > Location Title > Location Title > Item Count Container > Item Count Container > 1 items"
+      }
+    },
+    {
+      "id": "505583454e14",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43072 (Resource Page)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43072",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Group 4022 > Group 3892 > Resource Page"
+      }
+    },
+    {
+      "id": "fc3ca97bf43d",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43073 (RS00091)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43073",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > RS00091"
+      }
+    },
+    {
+      "id": "afbfdd7b3640",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43074 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43074",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+      }
+    },
+    {
+      "id": "ac7950b7ab10",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43157 (Full Name)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43157",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Full Name"
+      }
+    },
+    {
+      "id": "421f6b13a8bf",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43160 (Angel Jili)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43160",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Frame 15813 > Angel Jili"
+      }
+    },
+    {
+      "id": "359d2a5f2f03",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43162 (Mobile Number)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43162",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Mobile Number"
+      }
+    },
+    {
+      "id": "73697c721b57",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43163 (0724418827)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43163",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > 0724418827"
+      }
+    },
+    {
+      "id": "c1f1cc46be3a",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43165 (Email)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43165",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Email"
+      }
+    },
+    {
+      "id": "9a357bac66be",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43166 (angeljili@sappi.net)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43166",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > angeljili@sappi.net"
+      }
+    },
+    {
+      "id": "4d0c84b7d97e",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43168 (Manager)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43168",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Manager"
+      }
+    },
+    {
+      "id": "515d686f45df",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43169 (Allen Mhatu)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43169",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Allen Mhatu"
+      }
+    },
+    {
+      "id": "8e5ff832249c",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43171 (Employer)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43171",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Employer"
+      }
+    },
+    {
+      "id": "f68aef3e8616",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:43172 (Sappi Khulisa)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:43172",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Sappi Khulisa"
+      }
+    },
+    {
+      "id": "557b5ebe9b9c",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:45553 (RS00091)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:45553",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > RS00091"
+      }
+    },
+    {
+      "id": "7069e767a19c",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:45557 (5 items)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:45557",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > 5 items"
+      }
+    },
+    {
+      "id": "e5d8048c03bc",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26027:45670 (Guides)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:45670",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 15859 > Frame 15856 > Guides"
+      }
+    },
+    {
+      "id": "94d14b3230bf",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26056:39773 (Satellite)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26056:39773",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 32 > Frame 4007 > Satellite"
+      }
+    },
+    {
+      "id": "a08df682faa0",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26056:39776 (Satellite)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26056:39776",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 32 > Frame 4005 > Satellite"
+      }
+    },
+    {
+      "id": "220fd5223b6b",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation.",
+      "evidence": "Node 26056:39779 (Satellite)",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26056:39779",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Work Map - Individual Selection – 11 > Component 32 > Frame 4006 > Satellite"
+      }
+    }
+  ],
+  "manualChecks": [
+    {
+      "id": "571c6ea66527",
+      "wcagCriterion": "1.3.1",
+      "prompt": "Verify structure and relationships are programmatically determinable (headings, grouped controls, labels).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42977",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Figma Node 26027:42977"
+      }
+    },
+    {
+      "id": "9664d6a99623",
+      "wcagCriterion": "1.4.1",
+      "prompt": "Verify color is not the only means used to convey state or meaning.",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42977",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Figma Node 26027:42977"
+      }
+    },
+    {
+      "id": "8606521484f6",
+      "wcagCriterion": "2.4.11",
+      "prompt": "Verify focused elements are not fully obscured by fixed/sticky UI.",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42977",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Figma Node 26027:42977"
+      }
+    },
+    {
+      "id": "63734e84aa67",
+      "wcagCriterion": "2.4.7",
+      "prompt": "Verify focus indicators are clearly visible for all interactive components.",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42977",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Figma Node 26027:42977"
+      }
+    },
+    {
+      "id": "c5949ead72cd",
+      "wcagCriterion": "3.3.2",
+      "prompt": "Verify form controls include persistent labels/instructions and clear error guidance.",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
+        "nodeId": "26027:42977",
+        "frameName": "Figma Node 26027:42977",
+        "layerPath": "Figma Node 26027:42977"
+      }
+    }
+  ]
+}

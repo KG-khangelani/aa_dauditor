@@ -1,0 +1,24 @@
+{
+  "name": "aa_dauditor",
+  "version": "0.1.0",
+  "description": "WCAG 2.2 AA accessibility auditor for Figma designs",
+  "type": "module",
+  "bin": {
+    "aa-auditor": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/**/*.test.js",
+    "start": "node dist/src/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  }
+}

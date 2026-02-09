@@ -1,0 +1,36 @@
+{
+  "document": {
+    "id": "10:2",
+    "type": "FRAME",
+    "name": "Accessible Form",
+    "absoluteBoundingBox": { "x": 0, "y": 0, "width": 375, "height": 812 },
+    "fills": [
+      { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1, "a": 1 } }
+    ],
+    "children": [
+      {
+        "id": "11:1",
+        "type": "TEXT",
+        "name": "Heading",
+        "characters": "Create account",
+        "style": { "fontSize": 24, "fontWeight": 700 },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.1, "g": 0.1, "b": 0.1, "a": 1 } }
+        ],
+        "absoluteBoundingBox": { "x": 24, "y": 40, "width": 200, "height": 30 }
+      },
+      {
+        "id": "11:2",
+        "type": "RECTANGLE",
+        "name": "Submit button",
+        "absoluteBoundingBox": { "x": 24, "y": 120, "width": 120, "height": 44 },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.0, "g": 0.29, "b": 0.68, "a": 1 } }
+        ],
+        "reactions": [
+          { "action": "NAVIGATE" }
+        ]
+      }
+    ]
+  }
+}

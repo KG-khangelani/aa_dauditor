@@ -1,0 +1,36 @@
+{
+  "document": {
+    "id": "1:2",
+    "type": "FRAME",
+    "name": "Checkout Form",
+    "absoluteBoundingBox": { "x": 0, "y": 0, "width": 320, "height": 640 },
+    "fills": [
+      { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1, "a": 1 } }
+    ],
+    "children": [
+      {
+        "id": "2:1",
+        "type": "TEXT",
+        "name": "Muted label",
+        "characters": "Email",
+        "style": { "fontSize": 16, "fontWeight": 400 },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.5, "g": 0.5, "b": 0.5, "a": 1 } }
+        ],
+        "absoluteBoundingBox": { "x": 16, "y": 32, "width": 120, "height": 20 }
+      },
+      {
+        "id": "2:2",
+        "type": "RECTANGLE",
+        "name": "Primary button",
+        "absoluteBoundingBox": { "x": 16, "y": 80, "width": 20, "height": 20 },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.78, "g": 0.78, "b": 0.78, "a": 1 } }
+        ],
+        "reactions": [
+          { "action": "NAVIGATE" }
+        ]
+      }
+    ]
+  }
+}
