@@ -55,7 +55,11 @@ export function normalizeTarget(payload: FigmaTargetPayload): NormalizedTarget {
 
 function parseXmlMetadataNodes(xml: string): NormalizedNode[] {
   const nodes: NormalizedNode[] = [];
-  const stack: string[] = [];
+  const stack: Array<{
+    id?: string;
+    hidden: boolean;
+    zeroOpacity: boolean;
+  }> = [];
   const tagRegex = /<\/?([a-zA-Z0-9_-]+)([^>]*)>/g;
   let match: RegExpExecArray | null;
 
@@ -70,46 +74,65 @@ function parseXmlMetadataNodes(xml: string): NormalizedNode[] {
     }
 
     const attrs = parseXmlAttributes(attrBlock);
+    const inheritedHidden = stack.some((entry) => entry.hidden);
+    const inheritedZeroOpacity = stack.some((entry) => entry.zeroOpacity);
+    const hidden = inheritedHidden || attrs.hidden === "true" || attrs.visible === "false";
+    const zeroOpacity =
+      inheritedZeroOpacity || (parseFiniteNumber(attrs.opacity) ?? 1) <= 0;
+
     const id = attrs.id;
-    if (!id) {
-      if (!full.endsWith("/>")) {
-        stack.push("");
-      }
-      continue;
+    if (id && !hidden && !zeroOpacity) {
+      const parentId = nearestParentId(stack);
+      const name = attrs.name ?? tagName;
+      const type = tagName.replace(/-/g, "_").toUpperCase();
+
+      const x = parseFiniteNumber(attrs.x);
+      const y = parseFiniteNumber(attrs.y);
+      const width = parseFiniteNumber(attrs.width);
+      const height = parseFiniteNumber(attrs.height);
+
+      const bounds =
+        x !== undefined && y !== undefined && width !== undefined && height !== undefined
+          ? { x, y, width, height }
+          : undefined;
+
+      nodes.push({
+        id,
+        name,
+        type,
+        parentId,
+        bounds,
+        fills: [],
+        strokes: [],
+        text: type === "TEXT" ? name : undefined,
+        isInteractive: isInteractiveXmlNode(type, name),
+      });
     }
 
-    const parentId = stack.length > 0 ? stack[stack.length - 1] || undefined : undefined;
-    const name = attrs.name ?? tagName;
-    const type = tagName.replace(/-/g, "_").toUpperCase();
-
-    const x = parseFiniteNumber(attrs.x);
-    const y = parseFiniteNumber(attrs.y);
-    const width = parseFiniteNumber(attrs.width);
-    const height = parseFiniteNumber(attrs.height);
-
-    const bounds =
-      x !== undefined && y !== undefined && width !== undefined && height !== undefined
-        ? { x, y, width, height }
-        : undefined;
-
-    nodes.push({
-      id,
-      name,
-      type,
-      parentId,
-      bounds,
-      fills: [],
-      strokes: [],
-      text: type === "TEXT" ? name : undefined,
-      isInteractive: isInteractiveXmlNode(type, name),
-    });
-
     if (!full.endsWith("/>")) {
-      stack.push(id);
+      stack.push({
+        id: id && !hidden && !zeroOpacity ? id : undefined,
+        hidden,
+        zeroOpacity,
+      });
     }
   }
 
   return nodes;
+}
+
+function nearestParentId(
+  stack: Array<{
+    id?: string;
+  }>,
+): string | undefined {
+  for (let i = stack.length - 1; i >= 0; i -= 1) {
+    const id = stack[i].id;
+    if (id) {
+      return id;
+    }
+  }
+  return undefined;
 }
 
 function parseXmlAttributes(raw: string): Record<string, string> {
@@ -154,6 +177,10 @@ function walkMaybeNode(
   }
 
   const obj = value as Record<string, unknown>;
+  if (isNodeHidden(obj) || hasZeroOpacity(obj)) {
+    return;
+  }
+
   const node = normalizeNode(obj, parentId);
   const currentParent = node?.id ?? parentId;
 
@@ -243,6 +270,16 @@ function isInteractiveNode(
   }
 
   return false;
+}
+
+function isNodeHidden(obj: Record<string, unknown>): boolean {
+  return obj.visible === false || obj.hidden === true;
+}
+
+function hasZeroOpacity(obj: Record<string, unknown>): boolean {
+  const style = objectOrUndefined(obj.style);
+  const opacity = readNumber(obj.opacity) ?? readNumber(style?.opacity);
+  return opacity !== undefined && opacity <= 0;
 }
 
 function parseBounds(obj: Record<string, unknown>): NormalizedBounds | undefined {

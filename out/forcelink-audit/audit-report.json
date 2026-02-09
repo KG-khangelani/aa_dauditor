@@ -1,16 +1,16 @@
 {
-  "runId": "5ad72684-7d66-409a-b2f5-b79d6bddbb86",
-  "startedAt": "2026-02-09T12:01:04.289Z",
-  "finishedAt": "2026-02-09T12:01:06.159Z",
+  "runId": "a142b291-504c-47d2-bcd6-d12b618d0911",
+  "startedAt": "2026-02-09T12:09:01.235Z",
+  "finishedAt": "2026-02-09T12:09:02.822Z",
   "wcagVersion": "2.2",
   "level": "AA",
   "summary": {
     "totalTargets": 1,
-    "totalFindings": 38,
+    "totalFindings": 36,
     "suppressedFindings": 0,
-    "manualReviewFindings": 26,
+    "manualReviewFindings": 25,
     "bySeverity": {
-      "blocker": 12,
+      "blocker": 11,
       "critical": 0,
       "major": 0,
       "minor": 0
@@ -188,21 +188,6 @@
             "nodeId": "26027:43000",
             "frameName": "Figma Node 26027:42977",
             "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4004 > Group 3819 > Rectangle 684"
-          }
-        },
-        {
-          "id": "b5c84fb6aac0",
-          "ruleId": "WCAG-2.5.8-target-size-minimum",
-          "wcagCriterion": "2.5.8",
-          "severity": "blocker",
-          "status": "failed",
-          "message": "Interactive target is 64.0x21.0px; minimum is 24x24px.",
-          "evidence": "Node 26027:45556 (Rectangle 637)",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
-            "nodeId": "26027:45556",
-            "frameName": "Figma Node 26027:42977",
-            "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > Rectangle 637"
           }
         },
         {
@@ -521,21 +506,6 @@
           }
         },
         {
-          "id": "7069e767a19c",
-          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-          "wcagCriterion": "1.4.3",
-          "severity": "critical",
-          "status": "needs-manual-review",
-          "message": "Could not reliably determine text/background colors for contrast calculation.",
-          "evidence": "Node 26027:45557 (5 items)",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
-            "nodeId": "26027:45557",
-            "frameName": "Figma Node 26027:42977",
-            "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > 5 items"
-          }
-        },
-        {
           "id": "e5d8048c03bc",
           "ruleId": "WCAG-1.4.3-text-contrast-minimum",
           "wcagCriterion": "1.4.3",
@@ -820,21 +790,6 @@
         "nodeId": "26027:43000",
         "frameName": "Figma Node 26027:42977",
         "layerPath": "Work Map - Individual Selection – 11 > Frame 4006 > Group 4004 > Group 3819 > Rectangle 684"
-      }
-    },
-    {
-      "id": "b5c84fb6aac0",
-      "ruleId": "WCAG-2.5.8-target-size-minimum",
-      "wcagCriterion": "2.5.8",
-      "severity": "blocker",
-      "status": "failed",
-      "message": "Interactive target is 64.0x21.0px; minimum is 24x24px.",
-      "evidence": "Node 26027:45556 (Rectangle 637)",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
-        "nodeId": "26027:45556",
-        "frameName": "Figma Node 26027:42977",
-        "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > Rectangle 637"
       }
     },
     {
@@ -1150,21 +1105,6 @@
         "nodeId": "26027:45553",
         "frameName": "Figma Node 26027:42977",
         "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > RS00091"
-      }
-    },
-    {
-      "id": "7069e767a19c",
-      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-      "wcagCriterion": "1.4.3",
-      "severity": "critical",
-      "status": "needs-manual-review",
-      "message": "Could not reliably determine text/background colors for contrast calculation.",
-      "evidence": "Node 26027:45557 (5 items)",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977&t=kE1QYSLsBjLNyRjH-4",
-        "nodeId": "26027:45557",
-        "frameName": "Figma Node 26027:42977",
-        "layerPath": "Work Map - Individual Selection – 11 > Legend > Frame 4084 > Frame 15812 > Frame 4093 > Group 3561 > 5 items"
       }
     },
     {
