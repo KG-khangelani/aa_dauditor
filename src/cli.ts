@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { randomUUID } from "node:crypto";
 import { loadConfig } from "./config/load.js";
@@ -12,12 +12,27 @@ import {
   runFigmaMcpHealthCheck,
 } from "./figma/mcpClient.js";
 
+const APP_VERSION = resolveAppVersion();
+
 void main();
 
 async function main(): Promise<void> {
+  loadDotEnvFromCwd();
   const command = process.argv[2];
 
   try {
+    if (command === "--version" || command === "-v") {
+      console.log(`aa-auditor v${APP_VERSION}`);
+      process.exitCode = 0;
+      return;
+    }
+
+    if (command === "--help" || command === "-h") {
+      printUsage();
+      process.exitCode = 0;
+      return;
+    }
+
     if (command === "audit") {
       await runAuditCommand(process.argv.slice(3));
       return;
@@ -293,6 +308,71 @@ function requireValue(value: string | undefined, flagName: string): string {
   return value;
 }
 
+function loadDotEnvFromCwd(): void {
+  const envPath = resolve(".env");
+  if (!existsSync(envPath)) {
+    return;
+  }
+
+  const raw = readFileSync(envPath, "utf8");
+  const lines = raw.split(/\r?\n/);
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) {
+      continue;
+    }
+
+    const idx = trimmed.indexOf("=");
+    if (idx <= 0) {
+      continue;
+    }
+
+    const key = trimmed.slice(0, idx).trim();
+    if (!key) {
+      continue;
+    }
+
+    if (process.env[key] !== undefined) {
+      continue;
+    }
+
+    const rawValue = trimmed.slice(idx + 1).trim();
+    process.env[key] = unquote(rawValue);
+  }
+}
+
+function unquote(value: string): string {
+  if (
+    (value.startsWith('"') && value.endsWith('"')) ||
+    (value.startsWith("'") && value.endsWith("'"))
+  ) {
+    return value.slice(1, -1);
+  }
+  return value;
+}
+
+function resolveAppVersion(): string {
+  const candidates = [
+    new URL("../package.json", import.meta.url),
+    new URL("../../package.json", import.meta.url),
+  ];
+
+  for (const candidate of candidates) {
+    try {
+      const raw = readFileSync(candidate, "utf8");
+      const parsed = JSON.parse(raw) as { version?: string };
+      if (typeof parsed.version === "string" && parsed.version.trim()) {
+        return parsed.version.trim();
+      }
+    } catch {
+      // Try next candidate path.
+    }
+  }
+
+  return "0.0.0";
+}
+
 function printUsage(): void {
   console.log(`aa-auditor
 
@@ -301,5 +381,9 @@ Commands:
   aa-auditor health [--url <figma_url>]
   aa-auditor rules list
   aa-auditor config init [--path <path>] [--force]
+
+Other:
+  aa-auditor --help
+  aa-auditor --version
 `);
 }

@@ -18,28 +18,46 @@
 ## Prerequisites
 
 - Node.js 20+
-- Figma MCP configuration in Codex (`~/.codex/config.toml`)
 - `FIGMA_OAUTH_TOKEN` set in your environment
-- If using a local Figma MCP server (for example `http://127.0.0.1:3845/mcp`), keep the Figma desktop app open with the target file available; otherwise MCP calls can fail with `No Figma window open`.
+- A reachable Figma MCP endpoint (`FIGMA_MCP_URL`), either:
+  - Hosted (`https://mcp.figma.com/mcp`)
+  - Local desktop bridge (`http://127.0.0.1:3845/mcp`)
+- If using a local MCP server, keep Figma desktop open with the target file available.
 
 Optional environment variables:
 
-- `FIGMA_MCP_URL` (default `https://mcp.figma.com/mcp`; for local endpoints like `http://127.0.0.1:3845/mcp`, Figma desktop must be open)
+- `FIGMA_MCP_URL` (default `https://mcp.figma.com/mcp`)
 - `FIGMA_REGION` (default `us-east-1`)
 - `FIGMA_MCP_TIMEOUT_MS` (default `60000`)
 - `FIGMA_SUBLAYER_EXPANSION_LIMIT` (default `16`, max key child nodes fetched when design context is truncated)
 
-## Install and Build
+## Install as Standalone CLI
+
+Install globally from this repo:
 
 ```bash
 npm install
 npm run build
+npm link
+```
+
+Then run anywhere:
+
+```bash
+aa-auditor --help
+aa-auditor --version
+```
+
+You can also run without global install:
+
+```bash
+npm exec -- aa-auditor --help
 ```
 
 ## Initialize Config
 
 ```bash
-node dist/src/cli.js config init
+aa-auditor config init
 ```
 
 This writes `.aa-auditor.yml` with defaults.
@@ -47,7 +65,7 @@ This writes `.aa-auditor.yml` with defaults.
 ## Run an Audit
 
 ```bash
-node dist/src/cli.js audit \
+aa-auditor audit \
   --url "https://www.figma.com/file/FILE_KEY/Frame?node-id=1-2" \
   --out ./out
 ```
@@ -55,7 +73,7 @@ node dist/src/cli.js audit \
 Multi-target run:
 
 ```bash
-node dist/src/cli.js audit \
+aa-auditor audit \
   --url "https://www.figma.com/file/FILE_KEY/A?node-id=1-2" \
   --url "https://www.figma.com/file/FILE_KEY/B?node-id=10-2" \
   --out ./out
@@ -66,13 +84,13 @@ node dist/src/cli.js audit \
 Run a fast MCP preflight before audits:
 
 ```bash
-node dist/src/cli.js health --url "https://www.figma.com/design/FILE_KEY/Frame?node-id=1-2"
+aa-auditor health --url "https://www.figma.com/design/FILE_KEY/Frame?node-id=1-2"
 ```
 
 You can also run without a URL to validate MCP initialization only:
 
 ```bash
-node dist/src/cli.js health
+aa-auditor health
 ```
 
 ### Output
