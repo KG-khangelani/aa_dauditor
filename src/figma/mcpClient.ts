@@ -3,6 +3,7 @@ import { join } from "node:path";
 import type { FigmaClient, FigmaTargetPayload } from "../core/types.js";
 import { parseFigmaUrl } from "./url.js";
 import { extractDesignSystemColorsFromVariableDefs } from "./variable-colors.js";
+import { selectSublayerCandidatesFromMetadata } from "./sublayer-expansion.js";
 
 interface JsonRpcResult {
   jsonrpc: "2.0";
@@ -27,6 +28,7 @@ export interface FigmaMcpClientOptions {
   token: string;
   region: string;
   timeoutMs: number;
+  sublayerExpansionLimit: number;
 }
 
 export function createFigmaClientFromEnv(): FigmaClient {
@@ -34,6 +36,7 @@ export function createFigmaClientFromEnv(): FigmaClient {
   const token = process.env.FIGMA_OAUTH_TOKEN;
   const region = process.env.FIGMA_REGION ?? "us-east-1";
   const timeoutMs = Number(process.env.FIGMA_MCP_TIMEOUT_MS ?? "60000");
+  const sublayerExpansionLimit = Number(process.env.FIGMA_SUBLAYER_EXPANSION_LIMIT ?? "16");
 
   if (!token) {
     throw new Error(
@@ -44,7 +47,13 @@ export function createFigmaClientFromEnv(): FigmaClient {
     );
   }
 
-  return new RemoteFigmaMcpClient({ endpoint, token, region, timeoutMs });
+  return new RemoteFigmaMcpClient({
+    endpoint,
+    token,
+    region,
+    timeoutMs,
+    sublayerExpansionLimit,
+  });
 }
 
 export class RemoteFigmaMcpClient implements FigmaClient {
@@ -65,6 +74,7 @@ export class RemoteFigmaMcpClient implements FigmaClient {
     const designContext = await this.callToolWithFallback("get_design_context", parsed);
 
     let metadata: unknown;
+    const expandedDesignContexts: Array<{ nodeId: string; context: unknown }> = [];
     if (isPossiblyTruncated(designContext)) {
       warnings.push(
         "Design context may be truncated; fetched metadata for fallback inspection.",
@@ -73,6 +83,39 @@ export class RemoteFigmaMcpClient implements FigmaClient {
         warnings.push(`Metadata fallback failed: ${(err as Error).message}`);
         return undefined;
       });
+
+      if (typeof metadata === "string") {
+        const candidateNodeIds = selectSublayerCandidatesFromMetadata(
+          metadata,
+          parsed.nodeId,
+          this.options.sublayerExpansionLimit,
+        );
+
+        for (const nodeId of candidateNodeIds) {
+          const expandedContext = await this.callToolWithFallback("get_design_context", {
+            ...parsed,
+            nodeId,
+          }).catch((err) => {
+            warnings.push(
+              `Expanded design context fetch failed for node ${nodeId}: ${(err as Error).message}`,
+            );
+            return undefined;
+          });
+
+          if (expandedContext !== undefined) {
+            expandedDesignContexts.push({
+              nodeId,
+              context: expandedContext,
+            });
+          }
+        }
+
+        if (expandedDesignContexts.length > 0) {
+          warnings.push(
+            `Expanded design context fetched for ${expandedDesignContexts.length} sublayers.`,
+          );
+        }
+      }
     }
 
     const screenshotPayload = await this.callToolWithFallback("get_screenshot", parsed).catch(
@@ -103,6 +146,8 @@ export class RemoteFigmaMcpClient implements FigmaClient {
       nodeId: parsed.nodeId,
       frameName,
       designContext,
+      expandedDesignContexts:
+        expandedDesignContexts.length > 0 ? expandedDesignContexts : undefined,
       metadata,
       designSystemColors,
       screenshot,
@@ -250,7 +295,52 @@ function buildArgumentCandidates(
         ...common,
         artifactType: "COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN",
       },
+      {
+        url: parsed.figmaUrl,
+        clientLanguages: "typescript",
+        clientFrameworks: "node",
+        artifactType: "COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN",
+      },
       common,
+      {
+        url: parsed.figmaUrl,
+        clientLanguages: "typescript",
+        clientFrameworks: "node",
+      },
+      {
+        url: parsed.figmaUrl,
+      },
+      { nodeId: parsed.nodeId },
+    ];
+  }
+
+  if (toolName === "get_screenshot" || toolName === "get_variable_defs") {
+    return [
+      common,
+      {
+        url: parsed.figmaUrl,
+        clientLanguages: "typescript",
+        clientFrameworks: "node",
+      },
+      {
+        url: parsed.figmaUrl,
+      },
+      { nodeId: parsed.nodeId },
+    ];
+  }
+
+  if (toolName === "get_metadata") {
+    return [
+      common,
+      { nodeId: parsed.nodeId },
+      {
+        url: parsed.figmaUrl,
+        clientLanguages: "typescript",
+        clientFrameworks: "node",
+      },
+      {
+        url: parsed.figmaUrl,
+      },
     ];
   }
 

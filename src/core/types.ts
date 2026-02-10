@@ -157,6 +157,10 @@ export interface FigmaTargetPayload {
   nodeId: string;
   frameName: string;
   designContext: unknown;
+  expandedDesignContexts?: Array<{
+    nodeId: string;
+    context: unknown;
+  }>;
   metadata?: unknown;
   designSystemColors?: Record<string, string>;
   screenshot?: {

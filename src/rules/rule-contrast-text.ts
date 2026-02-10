@@ -2,10 +2,10 @@ import { colorToString, contrastRatio, isLargeText } from "../core/color.js";
 import { stableId } from "../core/id.js";
 import type { Finding, RuleDefinition, RuleEvaluationContext } from "../core/types.js";
 import {
-  findNearestBackground,
   firstFill,
   layerPathForNode,
   likelyTextNodes,
+  resolveEffectiveBackground,
 } from "../normalize/query.js";
 import {
   recommendDesignSystemColorsForContrast,
@@ -29,22 +29,33 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
 
   for (const node of likelyTextNodes(ctx.target)) {
     const fg = firstFill(node);
-    const bg = findNearestBackground(ctx.target, node);
+    const bgResolution = resolveEffectiveBackground(ctx.target, node);
+    const bg = bgResolution.color;
     const layerPath = layerPathForNode(ctx.target, node);
 
     if (!fg || !bg) {
+      const missingPart = !fg
+        ? "text foreground color"
+        : bgResolution.reason ?? "effective background color";
       findings.push({
         id: stableId([RULE_ID, ctx.target.nodeId, node.id, "manual"]),
         ruleId: RULE_ID,
         wcagCriterion: "1.4.3",
         severity: "major",
         status: "needs-manual-review",
-        message:
-          "Could not reliably determine text/background colors for contrast calculation.",
+        message: `Could not reliably determine text/background colors for contrast calculation (${missingPart}).`,
         recommendation: recommendTokensForManualColorReview(
           ctx.designSystemColors,
         ),
-        evidence: `Node ${node.id} (${node.name})`,
+        evidence: [
+          `Node ${node.id} (${node.name})`,
+          bgResolution.sourceLayerPath
+            ? `backgroundSource=${bgResolution.sourceLayerPath}`
+            : undefined,
+          bgResolution.reason ? `backgroundReason=${bgResolution.reason}` : undefined,
+        ]
+          .filter(Boolean)
+          .join(" | "),
         targetRef: {
           figmaUrl: ctx.target.figmaUrl,
           nodeId: node.id,
@@ -87,7 +98,12 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
         `Node ${node.id} (${node.name})`,
         `textColor=${colorToString(fg)}`,
         `backgroundColor=${colorToString(bg)}`,
-      ].join(" | "),
+        bgResolution.sourceLayerPath
+          ? `backgroundSource=${bgResolution.sourceLayerPath}`
+          : undefined,
+      ]
+        .filter(Boolean)
+        .join(" | "),
       targetRef: {
         figmaUrl: ctx.target.figmaUrl,
         nodeId: node.id,

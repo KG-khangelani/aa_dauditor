@@ -5,6 +5,7 @@
 ## Features
 
 - Figma MCP-backed input (`get_design_context`, metadata fallback, `get_screenshot`)
+- Smart sublayer expansion when top-level design context is too large (auto-fetches key child nodes)
 - Auto-import of Figma design-system color variables (`get_variable_defs`) for contrast recommendations
 - Automated checks:
   - `WCAG-1.4.3-text-contrast-minimum`
@@ -25,6 +26,7 @@ Optional environment variables:
 - `FIGMA_MCP_URL` (default `https://mcp.figma.com/mcp`)
 - `FIGMA_REGION` (default `us-east-1`)
 - `FIGMA_MCP_TIMEOUT_MS` (default `60000`)
+- `FIGMA_SUBLAYER_EXPANSION_LIMIT` (default `16`, max key child nodes fetched when design context is truncated)
 
 ## Install and Build
 

@@ -24,19 +24,7 @@ const INTERACTIVE_NAME_PATTERN =
   /button|link|input|field|checkbox|radio|switch|tab|menu|dropdown|submit|cta/i;
 
 export function normalizeTarget(payload: FigmaTargetPayload): NormalizedTarget {
-  const nodes: NormalizedNode[] = [];
-
-  const source =
-    objectOrUndefined(payload.designContext)?.document ??
-    objectOrUndefined(payload.designContext)?.node ??
-    payload.designContext;
-
-  if (typeof source === "string") {
-    const xmlNodes = parseXmlMetadataNodes(source);
-    nodes.push(...xmlNodes);
-  } else {
-    walkMaybeNode(source, nodes, undefined);
-  }
+  const nodes = collectNormalizedNodes(payload);
 
   if (nodes.length === 0) {
     payload.warnings.push(
@@ -53,7 +41,41 @@ export function normalizeTarget(payload: FigmaTargetPayload): NormalizedTarget {
   };
 }
 
-function parseXmlMetadataNodes(xml: string): NormalizedNode[] {
+function collectNormalizedNodes(payload: FigmaTargetPayload): NormalizedNode[] {
+  const rawNodes: NormalizedNode[] = [];
+
+  const primarySource =
+    objectOrUndefined(payload.designContext)?.document ??
+    objectOrUndefined(payload.designContext)?.node ??
+    payload.designContext;
+
+  if (typeof primarySource === "string") {
+    rawNodes.push(...parseXmlMetadataNodes(primarySource));
+  } else {
+    walkMaybeNode(primarySource, rawNodes, undefined);
+  }
+
+  for (const expansion of payload.expandedDesignContexts ?? []) {
+    const expansionSource =
+      objectOrUndefined(expansion.context)?.document ??
+      objectOrUndefined(expansion.context)?.node ??
+      expansion.context;
+
+    if (typeof expansionSource === "string") {
+      rawNodes.push(...parseXmlMetadataNodes(expansionSource, payload.nodeId));
+      continue;
+    }
+
+    walkMaybeNode(expansionSource, rawNodes, payload.nodeId);
+  }
+
+  return mergeNodesById(rawNodes);
+}
+
+function parseXmlMetadataNodes(
+  xml: string,
+  fallbackParentId?: string,
+): NormalizedNode[] {
   const nodes: NormalizedNode[] = [];
   const stack: Array<{
     id?: string;
@@ -82,7 +104,7 @@ function parseXmlMetadataNodes(xml: string): NormalizedNode[] {
 
     const id = attrs.id;
     if (id && !hidden && !zeroOpacity) {
-      const parentId = nearestParentId(stack);
+      const parentId = nearestParentId(stack) ?? fallbackParentId;
       const name = attrs.name ?? tagName;
       const type = tagName.replace(/-/g, "_").toUpperCase();
 
@@ -119,6 +141,48 @@ function parseXmlMetadataNodes(xml: string): NormalizedNode[] {
   }
 
   return nodes;
+}
+
+function mergeNodesById(nodes: NormalizedNode[]): NormalizedNode[] {
+  const merged = new Map<string, NormalizedNode>();
+
+  for (const node of nodes) {
+    const existing = merged.get(node.id);
+    if (!existing) {
+      merged.set(node.id, node);
+      continue;
+    }
+
+    merged.set(node.id, {
+      ...existing,
+      name: richerString(existing.name, node.name) ?? existing.name,
+      type: richerString(existing.type, node.type) ?? existing.type,
+      parentId: existing.parentId ?? node.parentId,
+      bounds: existing.bounds ?? node.bounds,
+      fills: node.fills.length > 0 ? node.fills : existing.fills,
+      strokes: node.strokes.length > 0 ? node.strokes : existing.strokes,
+      text: node.text ?? existing.text,
+      fontSize: existing.fontSize ?? node.fontSize,
+      fontWeight: existing.fontWeight ?? node.fontWeight,
+      lineHeightPx: existing.lineHeightPx ?? node.lineHeightPx,
+      isInteractive: existing.isInteractive || node.isInteractive,
+    });
+  }
+
+  return [...merged.values()];
+}
+
+function richerString(a?: string, b?: string): string | undefined {
+  if (!a && !b) {
+    return undefined;
+  }
+  if (!a) {
+    return b;
+  }
+  if (!b) {
+    return a;
+  }
+  return b.length > a.length ? b : a;
 }
 
 function nearestParentId(

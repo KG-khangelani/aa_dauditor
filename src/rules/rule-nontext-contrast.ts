@@ -2,11 +2,11 @@ import { colorToString, contrastRatio } from "../core/color.js";
 import { stableId } from "../core/id.js";
 import type { Finding, RuleDefinition, RuleEvaluationContext } from "../core/types.js";
 import {
-  findNearestBackground,
   firstFill,
   firstStroke,
   layerPathForNode,
   likelyNonTextContrastNodes,
+  resolveEffectiveBackground,
 } from "../normalize/query.js";
 import {
   recommendDesignSystemColorsForContrast,
@@ -30,22 +30,33 @@ function evaluateNonTextContrast(ctx: RuleEvaluationContext): Finding[] {
 
   for (const node of likelyNonTextContrastNodes(ctx.target)) {
     const fg = firstStroke(node) ?? firstFill(node);
-    const bg = findNearestBackground(ctx.target, node);
+    const bgResolution = resolveEffectiveBackground(ctx.target, node);
+    const bg = bgResolution.color;
     const layerPath = layerPathForNode(ctx.target, node);
 
     if (!fg || !bg) {
+      const missingPart = !fg
+        ? "foreground color"
+        : bgResolution.reason ?? "effective background color";
       findings.push({
         id: stableId([RULE_ID, ctx.target.nodeId, node.id, "manual"]),
         ruleId: RULE_ID,
         wcagCriterion: "1.4.11",
         severity: "major",
         status: "needs-manual-review",
-        message:
-          "Could not reliably determine non-text foreground/background colors.",
+        message: `Could not reliably determine non-text foreground/background colors (${missingPart}).`,
         recommendation: recommendTokensForManualColorReview(
           ctx.designSystemColors,
         ),
-        evidence: `Node ${node.id} (${node.name})`,
+        evidence: [
+          `Node ${node.id} (${node.name})`,
+          bgResolution.sourceLayerPath
+            ? `backgroundSource=${bgResolution.sourceLayerPath}`
+            : undefined,
+          bgResolution.reason ? `backgroundReason=${bgResolution.reason}` : undefined,
+        ]
+          .filter(Boolean)
+          .join(" | "),
         targetRef: {
           figmaUrl: ctx.target.figmaUrl,
           nodeId: node.id,
@@ -79,7 +90,12 @@ function evaluateNonTextContrast(ctx: RuleEvaluationContext): Finding[] {
         `Node ${node.id} (${node.name})`,
         `foreground=${colorToString(fg)}`,
         `background=${colorToString(bg)}`,
-      ].join(" | "),
+        bgResolution.sourceLayerPath
+          ? `backgroundSource=${bgResolution.sourceLayerPath}`
+          : undefined,
+      ]
+        .filter(Boolean)
+        .join(" | "),
       targetRef: {
         figmaUrl: ctx.target.figmaUrl,
         nodeId: node.id,
