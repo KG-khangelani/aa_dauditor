@@ -26,6 +26,21 @@ interface ToolCallResult {
   [key: string]: unknown;
 }
 
+export type HealthStatus = "ok" | "warn" | "fail";
+
+export interface FigmaMcpHealthCheck {
+  name: string;
+  status: HealthStatus;
+  message: string;
+}
+
+export interface FigmaMcpHealthResult {
+  status: HealthStatus;
+  endpoint: string;
+  checks: FigmaMcpHealthCheck[];
+  suggestions: string[];
+}
+
 export interface FigmaMcpClientOptions {
   endpoint: string;
   token: string;
@@ -59,6 +74,18 @@ export function createFigmaClientFromEnv(): FigmaClient {
   });
 }
 
+export async function runFigmaMcpHealthCheck(
+  figmaUrl?: string,
+): Promise<FigmaMcpHealthResult> {
+  const client = createFigmaClientFromEnv();
+
+  if (!(client instanceof RemoteFigmaMcpClient)) {
+    throw new Error("Health check requires the built-in RemoteFigmaMcpClient.");
+  }
+
+  return client.healthCheck(figmaUrl);
+}
+
 export class RemoteFigmaMcpClient implements FigmaClient {
   private initialized = false;
 
@@ -67,6 +94,104 @@ export class RemoteFigmaMcpClient implements FigmaClient {
   private nextId = 1;
 
   constructor(private readonly options: FigmaMcpClientOptions) {}
+
+  async healthCheck(figmaUrl?: string): Promise<FigmaMcpHealthResult> {
+    const checks: FigmaMcpHealthCheck[] = [];
+    const suggestions = new Set<string>();
+
+    try {
+      await this.initialize();
+      checks.push({
+        name: "mcp-initialize",
+        status: "ok",
+        message: "MCP initialize succeeded.",
+      });
+    } catch (error) {
+      const diagnostic = diagnoseMcpHealthError((error as Error).message);
+      checks.push({
+        name: "mcp-initialize",
+        status: diagnostic.status,
+        message: diagnostic.summary,
+      });
+      for (const suggestion of diagnostic.suggestions) {
+        suggestions.add(suggestion);
+      }
+
+      return {
+        status: summarizeHealthStatus(checks),
+        endpoint: this.options.endpoint,
+        checks,
+        suggestions: [...suggestions],
+      };
+    }
+
+    if (!figmaUrl) {
+      checks.push({
+        name: "design-tools",
+        status: "warn",
+        message: "No --url provided; skipped design tool validation.",
+      });
+      suggestions.add(
+        "Provide --url to validate get_metadata/get_design_context against a specific frame.",
+      );
+      return {
+        status: summarizeHealthStatus(checks),
+        endpoint: this.options.endpoint,
+        checks,
+        suggestions: [...suggestions],
+      };
+    }
+
+    let parsed: ReturnType<typeof parseFigmaUrl>;
+    try {
+      parsed = parseFigmaUrl(figmaUrl);
+      checks.push({
+        name: "url-parse",
+        status: "ok",
+        message: `Parsed node ${parsed.nodeId}.`,
+      });
+    } catch (error) {
+      checks.push({
+        name: "url-parse",
+        status: "fail",
+        message: (error as Error).message,
+      });
+      suggestions.add("Use a full Figma URL that includes a node-id query parameter.");
+
+      return {
+        status: summarizeHealthStatus(checks),
+        endpoint: this.options.endpoint,
+        checks,
+        suggestions: [...suggestions],
+      };
+    }
+
+    try {
+      await this.callToolWithFallback("get_metadata", parsed);
+      checks.push({
+        name: "get_metadata",
+        status: "ok",
+        message: "Metadata fetch succeeded.",
+      });
+    } catch (error) {
+      const diagnostic = diagnoseMcpHealthError((error as Error).message);
+      checks.push({
+        name: "get_metadata",
+        status: diagnostic.status,
+        message: diagnostic.summary,
+      });
+      for (const suggestion of diagnostic.suggestions) {
+        suggestions.add(suggestion);
+      }
+    }
+
+    return {
+      status: summarizeHealthStatus(checks),
+      endpoint: this.options.endpoint,
+      checks,
+      suggestions: [...suggestions],
+    };
+  }
 
   async fetchTarget(figmaUrl: string): Promise<FigmaTargetPayload> {
     const parsed = parseFigmaUrl(figmaUrl);
@@ -352,6 +477,110 @@ export class RemoteFigmaMcpClient implements FigmaClient {
 
     return message.result;
   }
+}
+
+function summarizeHealthStatus(checks: FigmaMcpHealthCheck[]): HealthStatus {
+  if (checks.some((check) => check.status === "fail")) {
+    return "fail";
+  }
+  if (checks.some((check) => check.status === "warn")) {
+    return "warn";
+  }
+  return "ok";
+}
+
+export function diagnoseMcpHealthError(message: string): {
+  status: HealthStatus;
+  summary: string;
+  suggestions: string[];
+} {
+  const normalized = message.toLowerCase();
+
+  if (
+    normalized.includes("figma_oauth_token") ||
+    normalized.includes("unauthorized") ||
+    normalized.includes("http 401") ||
+    normalized.includes("oauth")
+  ) {
+    return {
+      status: "fail",
+      summary: "Authentication failed for Figma MCP.",
+      suggestions: [
+        "Verify FIGMA_OAUTH_TOKEN is set and valid in the shell running aa-auditor.",
+        "Restart Codex/Figma MCP after refreshing the token.",
+      ],
+    };
+  }
+
+  if (normalized.includes("no figma window open")) {
+    return {
+      status: "fail",
+      summary: "Figma desktop is not exposing an active window to local MCP.",
+      suggestions: [
+        "Open Figma desktop and keep the target file open in the foreground.",
+      ],
+    };
+  }
+
+  if (normalized.includes("enablecodegenmcpserver")) {
+    return {
+      status: "fail",
+      summary: "Local Figma MCP bridge is in a broken Codegen state.",
+      suggestions: [
+        "Fully quit and reopen Figma desktop, then reopen the target file.",
+        "Update Figma desktop to the latest version and retry health.",
+      ],
+    };
+  }
+
+  if (normalized.includes("only available for design, figjam, and make files")) {
+    return {
+      status: "fail",
+      summary: "MCP rejected this target as unsupported file context.",
+      suggestions: [
+        "Open the URL in a standard Figma Design/FigJam/Make file tab, not a restricted view.",
+        "Retry with a plain /design/... URL and node-id while that file is open.",
+      ],
+    };
+  }
+
+  if (
+    normalized.includes("operation was aborted") ||
+    normalized.includes("aborted") ||
+    normalized.includes("timeout") ||
+    normalized.includes("fetch failed")
+  ) {
+    return {
+      status: "fail",
+      summary: "MCP request timed out or was aborted.",
+      suggestions: [
+        "Restart Figma desktop and close heavy files to recover memory.",
+        "Increase FIGMA_MCP_TIMEOUT_MS (for example 30000-60000) and retry.",
+      ],
+    };
+  }
+
+  if (
+    normalized.includes("econnrefused") ||
+    normalized.includes("couldn't connect") ||
+    normalized.includes("enotfound")
+  ) {
+    return {
+      status: "fail",
+      summary: "Could not connect to the configured MCP endpoint.",
+      suggestions: [
+        "Verify FIGMA_MCP_URL and ensure the local MCP server process is running.",
+      ],
+    };
+  }
+
+  return {
+    status: "fail",
+    summary: message,
+    suggestions: [
+      "Inspect Figma desktop + MCP server logs and retry after restart.",
+    ],
+  };
 }
 
 function buildArgumentCandidates(

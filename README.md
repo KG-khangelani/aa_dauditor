@@ -61,6 +61,20 @@ node dist/src/cli.js audit \
   --out ./out
 ```
 
+## MCP Health Check
+
+Run a fast MCP preflight before audits:
+
+```bash
+node dist/src/cli.js health --url "https://www.figma.com/design/FILE_KEY/Frame?node-id=1-2"
+```
+
+You can also run without a URL to validate MCP initialization only:
+
+```bash
+node dist/src/cli.js health
+```
+
 ### Output
 
 - JSON: `out/audit-report.json`
@@ -97,6 +111,7 @@ When a text/non-text contrast rule fails, the report includes variable-aware fix
 ## Commands
 
 - `aa-auditor audit --url <figma_url> [--url ...] --out <dir> [--config <path>] [--format json|html|both] [--fail-on blocker,critical]`
+- `aa-auditor health [--url <figma_url>]`
 - `aa-auditor rules list`
 - `aa-auditor config init [--path <path>] [--force]`
 

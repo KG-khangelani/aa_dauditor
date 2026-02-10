@@ -7,7 +7,10 @@ import { createDefaultConfigYaml } from "./config/schema.js";
 import { runAudit } from "./core/auditRunner.js";
 import { RULE_CATALOG } from "./core/ruleCatalog.js";
 import type { ReportFormat, Severity } from "./core/types.js";
-import { createFigmaClientFromEnv } from "./figma/mcpClient.js";
+import {
+  createFigmaClientFromEnv,
+  runFigmaMcpHealthCheck,
+} from "./figma/mcpClient.js";
 
 void main();
 
@@ -17,6 +20,11 @@ async function main(): Promise<void> {
   try {
     if (command === "audit") {
       await runAuditCommand(process.argv.slice(3));
+      return;
+    }
+
+    if (command === "health") {
+      await runHealthCommand(process.argv.slice(3));
       return;
     }
 
@@ -89,6 +97,27 @@ async function runAuditCommand(args: string[]): Promise<void> {
   } else {
     process.exitCode = 0;
   }
+}
+
+async function runHealthCommand(args: string[]): Promise<void> {
+  const parsed = parseHealthArgs(args);
+  const result = await runFigmaMcpHealthCheck(parsed.url);
+
+  console.log(`MCP endpoint: ${result.endpoint}`);
+  console.log(`Status: ${result.status.toUpperCase()}`);
+  console.log("Checks:");
+  for (const check of result.checks) {
+    console.log(`- [${check.status.toUpperCase()}] ${check.name}: ${check.message}`);
+  }
+
+  if (result.suggestions.length > 0) {
+    console.log("Next steps:");
+    for (const suggestion of result.suggestions) {
+      console.log(`- ${suggestion}`);
+    }
+  }
+
+  process.exitCode = result.status === "fail" ? 1 : 0;
 }
 
 function runRulesListCommand(): void {
@@ -224,6 +253,26 @@ function parseSeverityCsv(value: string): Severity[] {
   return Array.from(new Set(parsed));
 }
 
+function parseHealthArgs(args: string[]): {
+  url?: string;
+} {
+  let url: string | undefined;
+
+  for (let i = 0; i < args.length; i += 1) {
+    const token = args[i];
+
+    if (token === "--url") {
+      url = requireValue(args[i + 1], "--url");
+      i += 1;
+      continue;
+    }
+
+    throw new Error(`Unknown health option: ${token}`);
+  }
+
+  return { url };
+}
+
 function inferReportFormatFromConfig(
   formats: Array<"json" | "html">,
 ): ReportFormat {
@@ -249,6 +298,7 @@ function printUsage(): void {
 
 Commands:
   aa-auditor audit --url <figma_url> [--url ...] --out <dir> [--config <path>] [--format json|html|both] [--fail-on blocker,critical]
+  aa-auditor health [--url <figma_url>]
   aa-auditor rules list
   aa-auditor config init [--path <path>] [--force]
 `);
