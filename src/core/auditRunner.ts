@@ -1,5 +1,6 @@
 import { mkdir } from "node:fs/promises";
 import { join } from "node:path";
+import { parseFigmaUrl } from "../figma/url.js";
 import { buildManualChecklist } from "../manual/checklist.js";
 import { normalizeTarget } from "../normalize/model.js";
 import { writeHtmlReport } from "../report/html.js";
@@ -15,6 +16,7 @@ import type {
   ManualCheck,
   Severity,
   TargetResult,
+  NormalizedTarget,
 } from "./types.js";
 import { persistScreenshot } from "../figma/mcpClient.js";
 
@@ -96,8 +98,8 @@ export async function runAudit(
         warnings: [...normalized.warnings, ...suppressionResult.warnings],
       });
     } catch (error) {
-      globalWarnings.push(
-        `Target ${target.figmaUrl} failed during fetch/audit: ${(error as Error).message}`,
+      targetResults.push(
+        buildFetchFailureTargetResult(target.figmaUrl, (error as Error).message),
       );
     }
   }
@@ -205,4 +207,44 @@ function sortManualChecks(checks: ManualCheck[]): ManualCheck[] {
       [b.targetRef.nodeId, b.wcagCriterion, b.id].join("|"),
     ),
   );
+}
+
+function buildFetchFailureTargetResult(
+  figmaUrl: string,
+  errorMessage: string,
+): TargetResult {
+  const parsed = tryParseFigmaUrl(figmaUrl);
+  const nodeId = parsed?.nodeId ?? "unknown";
+  const frameName = parsed ? `Figma Node ${parsed.nodeId}` : "Figma Target";
+
+  const fallbackTarget: NormalizedTarget = {
+    figmaUrl,
+    nodeId,
+    frameName,
+    nodes: [],
+    warnings: [],
+  };
+
+  return {
+    figmaUrl,
+    nodeId,
+    frameName,
+    findings: [],
+    manualChecks: buildManualChecklist(fallbackTarget),
+    warnings: [
+      `Fetch/audit fallback engaged: ${errorMessage}`,
+    ],
+  };
+}
+
+function tryParseFigmaUrl(figmaUrl: string):
+  | {
+      nodeId: string;
+    }
+  | undefined {
+  try {
+    return parseFigmaUrl(figmaUrl);
+  } catch {
+    return undefined;
+  }
 }

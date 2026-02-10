@@ -98,6 +98,34 @@ export function selectSublayerCandidatesFromMetadata(
   return Array.from(new Set(ranked));
 }
 
+export function selectAncestorCandidatesFromMetadata(
+  metadataXml: string,
+  nodeId: string,
+  limit: number,
+): string[] {
+  if (!Number.isFinite(limit) || limit <= 0) {
+    return [];
+  }
+
+  const nodes = parseMetadataXmlNodes(metadataXml);
+  const byId = new Map(nodes.map((node) => [node.id, node] as const));
+  const out: string[] = [];
+  const visited = new Set<string>([nodeId]);
+
+  let current = byId.get(nodeId);
+  while (current?.parentId && out.length < limit) {
+    const parentId = current.parentId;
+    if (visited.has(parentId)) {
+      break;
+    }
+    visited.add(parentId);
+    out.push(parentId);
+    current = byId.get(parentId);
+  }
+
+  return out;
+}
+
 function scoreNode(node: MetadataNodeSummary): number {
   const type = node.type.toUpperCase();
   const name = node.name;

@@ -10,6 +10,7 @@ test("recommends passing design-system tokens for contrast", () => {
     {
       "text.primary": "#111827",
       "text.muted": "#9CA3AF",
+      "surface.canvas": "#FFFFFF",
       "text.inverse": "#FFFFFF",
     },
     { r: 156, g: 163, b: 175, a: 1 },
@@ -18,6 +19,10 @@ test("recommends passing design-system tokens for contrast", () => {
   );
 
   assert.ok(recommendation);
+  assert.match(recommendation!, /Variable-aware fix suggestions/);
+  assert.match(recommendation!, /Fix A \(replace foreground variable\)/);
+  assert.match(recommendation!, /Fix B \(replace background variable\)/);
+  assert.match(recommendation!, /Fix C \(replace both with variables\)/);
   assert.match(recommendation!, /text\.primary/);
 });
 

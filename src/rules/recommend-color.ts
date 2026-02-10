@@ -9,6 +9,12 @@ interface Candidate {
   distance: number;
 }
 
+interface TokenColor {
+  token: string;
+  hex: string;
+  color: NormalizedColor;
+}
+
 export function recommendDesignSystemColorsForContrast(
   designSystemColors: Record<string, string> | undefined,
   foreground: NormalizedColor,
@@ -19,48 +25,80 @@ export function recommendDesignSystemColorsForContrast(
     return undefined;
   }
 
-  const candidates: Candidate[] = [];
-
-  for (const [token, hexInput] of Object.entries(designSystemColors)) {
-    const parsed = parseHexColor(hexInput);
-    if (!parsed) {
-      continue;
-    }
-
-    const ratio = contrastRatio(parsed, background);
-    if (ratio < threshold) {
-      continue;
-    }
-
-    candidates.push({
-      token,
-      hex: normalizeHex(hexInput),
-      color: parsed,
-      ratio,
-      distance: rgbDistance(parsed, foreground),
-    });
+  const tokenColors = parseTokenColors(designSystemColors);
+  if (tokenColors.length === 0) {
+    return undefined;
   }
 
-  if (candidates.length === 0) {
+  const fgCandidates = findForegroundCandidates(
+    tokenColors,
+    foreground,
+    background,
+    threshold,
+  );
+  const bestForeground = fgCandidates[0];
+  const bestBackground = findBestBackgroundReplacement(
+    tokenColors,
+    foreground,
+    background,
+    threshold,
+  );
+  const bestPair = findBestTokenPair(
+    tokenColors,
+    foreground,
+    background,
+    threshold,
+  );
+
+  if (!bestForeground && !bestBackground && !bestPair) {
     return `No design-system color token meets ${threshold.toFixed(
       1,
-    )}:1 contrast against this background.`;
+    )}:1 contrast for this foreground/background combination.`;
   }
 
-  candidates.sort((a, b) => {
-    const distanceDiff = a.distance - b.distance;
-    if (distanceDiff !== 0) {
-      return distanceDiff;
-    }
-    return b.ratio - a.ratio;
-  });
+  const parts: string[] = [];
 
-  const top = candidates.slice(0, 3);
-  const list = top
+  if (bestForeground) {
+    parts.push(
+      [
+        "Fix A (replace foreground variable):",
+        `${bestForeground.token} (${bestForeground.hex})`,
+        `-> ${bestForeground.ratio.toFixed(2)}:1`,
+      ].join(" "),
+    );
+  }
+
+  if (bestBackground) {
+    parts.push(
+      [
+        "Fix B (replace background variable):",
+        `${bestBackground.token} (${bestBackground.hex})`,
+        `-> ${bestBackground.ratio.toFixed(2)}:1`,
+      ].join(" "),
+    );
+  }
+
+  if (bestPair) {
+    parts.push(
+      [
+        "Fix C (replace both with variables):",
+        `fg ${bestPair.foreground.token} (${bestPair.foreground.hex}) +`,
+        `bg ${bestPair.background.token} (${bestPair.background.hex})`,
+        `-> ${bestPair.ratio.toFixed(2)}:1`,
+      ].join(" "),
+    );
+  }
+
+  const alternatives = fgCandidates
+    .slice(0, 3)
     .map((entry) => `${entry.token} (${entry.hex}, ${entry.ratio.toFixed(2)}:1)`)
     .join("; ");
 
-  return `Suggested design-system tokens: ${list}`;
+  if (alternatives) {
+    parts.push(`Other passing foreground variables: ${alternatives}.`);
+  }
+
+  return `Variable-aware fix suggestions: ${parts.join(" ")}`;
 }
 
 export function recommendTokensForManualColorReview(
@@ -89,6 +127,148 @@ function rgbDistance(a: NormalizedColor, b: NormalizedColor): number {
   const dg = a.g - b.g;
   const db = a.b - b.b;
   return Math.sqrt(dr * dr + dg * dg + db * db);
+}
+
+function parseTokenColors(
+  designSystemColors: Record<string, string>,
+): TokenColor[] {
+  const out: TokenColor[] = [];
+  for (const [token, hexInput] of Object.entries(designSystemColors)) {
+    const parsed = parseHexColor(hexInput);
+    if (!parsed) {
+      continue;
+    }
+    out.push({
+      token,
+      hex: normalizeHex(hexInput),
+      color: parsed,
+    });
+  }
+  return out;
+}
+
+function findForegroundCandidates(
+  tokenColors: TokenColor[],
+  foreground: NormalizedColor,
+  background: NormalizedColor,
+  threshold: number,
+): Candidate[] {
+  const candidates: Candidate[] = [];
+
+  for (const tokenColor of tokenColors) {
+    const ratio = contrastRatio(tokenColor.color, background);
+    if (ratio < threshold) {
+      continue;
+    }
+
+    candidates.push({
+      token: tokenColor.token,
+      hex: tokenColor.hex,
+      color: tokenColor.color,
+      ratio,
+      distance: rgbDistance(tokenColor.color, foreground),
+    });
+  }
+
+  candidates.sort((a, b) => {
+    const distanceDiff = a.distance - b.distance;
+    if (distanceDiff !== 0) {
+      return distanceDiff;
+    }
+    return b.ratio - a.ratio;
+  });
+
+  return candidates;
+}
+
+function findBestBackgroundReplacement(
+  tokenColors: TokenColor[],
+  foreground: NormalizedColor,
+  background: NormalizedColor,
+  threshold: number,
+): Candidate | undefined {
+  const candidates: Candidate[] = [];
+
+  for (const tokenColor of tokenColors) {
+    // Only recommend fully opaque background swaps for deterministic contrast.
+    if (tokenColor.color.a < 1) {
+      continue;
+    }
+
+    const ratio = contrastRatio(foreground, tokenColor.color);
+    if (ratio < threshold) {
+      continue;
+    }
+
+    candidates.push({
+      token: tokenColor.token,
+      hex: tokenColor.hex,
+      color: tokenColor.color,
+      ratio,
+      distance: rgbDistance(tokenColor.color, background),
+    });
+  }
+
+  candidates.sort((a, b) => {
+    const distanceDiff = a.distance - b.distance;
+    if (distanceDiff !== 0) {
+      return distanceDiff;
+    }
+    return b.ratio - a.ratio;
+  });
+
+  return candidates[0];
+}
+
+function findBestTokenPair(
+  tokenColors: TokenColor[],
+  foreground: NormalizedColor,
+  background: NormalizedColor,
+  threshold: number,
+):
+  | {
+      foreground: TokenColor;
+      background: TokenColor;
+      ratio: number;
+      distance: number;
+    }
+  | undefined {
+  let best:
+    | {
+        foreground: TokenColor;
+        background: TokenColor;
+        ratio: number;
+        distance: number;
+      }
+    | undefined;
+
+  for (const fgToken of tokenColors) {
+    for (const bgToken of tokenColors) {
+      // Keep pair guidance deterministic by requiring an opaque background.
+      if (bgToken.color.a < 1) {
+        continue;
+      }
+
+      const ratio = contrastRatio(fgToken.color, bgToken.color);
+      if (ratio < threshold) {
+        continue;
+      }
+
+      const distance =
+        rgbDistance(fgToken.color, foreground) + rgbDistance(bgToken.color, background);
+
+      if (!best || distance < best.distance || (distance === best.distance && ratio > best.ratio)) {
+        best = {
+          foreground: fgToken,
+          background: bgToken,
+          ratio,
+          distance,
+        };
+      }
+    }
+  }
+
+  return best;
 }
 
 function parseHexColor(value: string): NormalizedColor | undefined {

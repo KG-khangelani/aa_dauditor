@@ -20,10 +20,11 @@
 - Node.js 20+
 - Figma MCP configuration in Codex (`~/.codex/config.toml`)
 - `FIGMA_OAUTH_TOKEN` set in your environment
+- If using a local Figma MCP server (for example `http://127.0.0.1:3845/mcp`), keep the Figma desktop app open with the target file available; otherwise MCP calls can fail with `No Figma window open`.
 
 Optional environment variables:
 
-- `FIGMA_MCP_URL` (default `https://mcp.figma.com/mcp`)
+- `FIGMA_MCP_URL` (default `https://mcp.figma.com/mcp`; for local endpoints like `http://127.0.0.1:3845/mcp`, Figma desktop must be open)
 - `FIGMA_REGION` (default `us-east-1`)
 - `FIGMA_MCP_TIMEOUT_MS` (default `60000`)
 - `FIGMA_SUBLAYER_EXPANSION_LIMIT` (default `16`, max key child nodes fetched when design context is truncated)
@@ -81,7 +82,11 @@ designSystemColors:
   border.default: "#CBD5E1"
 ```
 
-When a text/non-text contrast rule fails, the report includes suggested tokens that satisfy the required contrast ratio against the detected background.
+When a text/non-text contrast rule fails, the report includes variable-aware fix suggestions:
+
+- `Fix A`: swap foreground to a passing design-system variable.
+- `Fix B`: swap background to a passing design-system variable (opaque tokens only).
+- `Fix C`: swap both foreground and background to the closest passing variable pair.
 
 ### Exit codes
 

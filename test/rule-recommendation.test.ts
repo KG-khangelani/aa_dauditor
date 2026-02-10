@@ -31,5 +31,6 @@ test("text contrast findings include design-system color recommendations", () =>
   const failed = findings.find((f) => f.status === "failed");
   assert.ok(failed);
   assert.ok(failed!.recommendation);
-  assert.match(failed!.recommendation!, /Suggested design-system tokens/);
+  assert.match(failed!.recommendation!, /Variable-aware fix suggestions/);
+  assert.match(failed!.recommendation!, /Fix A/);
 });

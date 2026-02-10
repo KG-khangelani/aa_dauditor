@@ -1,0 +1,26 @@
+{
+  "runId": "41cb6e8c-aac9-4a46-8cc0-9ff2d0284714",
+  "startedAt": "2026-02-10T03:01:50.253Z",
+  "finishedAt": "2026-02-10T03:01:51.487Z",
+  "wcagVersion": "2.2",
+  "level": "AA",
+  "summary": {
+    "totalTargets": 1,
+    "totalFindings": 0,
+    "suppressedFindings": 0,
+    "manualReviewFindings": 0,
+    "bySeverity": {
+      "blocker": 0,
+      "critical": 0,
+      "major": 0,
+      "minor": 0
+    },
+    "failedTargets": 0,
+    "warnings": [
+      "Target https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874 failed during fetch/audit: HTTP 401 from MCP endpoint: Unauthorized"
+    ]
+  },
+  "targets": [],
+  "findings": [],
+  "manualChecks": []
+}

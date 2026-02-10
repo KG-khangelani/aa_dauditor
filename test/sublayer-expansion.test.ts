@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
+  selectAncestorCandidatesFromMetadata,
   parseMetadataXmlNodes,
   selectSublayerCandidatesFromMetadata,
 } from "../src/figma/sublayer-expansion.js";
@@ -39,4 +40,10 @@ test("selectSublayerCandidatesFromMetadata filters hidden/zero-opacity and ranks
   assert.ok(!selected.includes("1:5"));
   assert.ok(!selected.includes("1:6"));
   assert.ok(!selected.includes("1:7"));
+});
+
+test("selectAncestorCandidatesFromMetadata returns nearest parent chain", () => {
+  const ancestors = selectAncestorCandidatesFromMetadata(metadataXml, "1:3", 4);
+
+  assert.deepEqual(ancestors, ["1:2", "1:1"]);
 });

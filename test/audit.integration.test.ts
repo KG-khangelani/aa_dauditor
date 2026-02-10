@@ -40,6 +40,12 @@ class MockFigmaClient implements FigmaClient {
   }
 }
 
+class FailingFigmaClient implements FigmaClient {
+  async fetchTarget(): Promise<FigmaTargetPayload> {
+    throw new Error("Synthetic fetch failure");
+  }
+}
+
 test("integration: deterministic report, html content, and fail gate", async () => {
   const outDir1 = await mkdtemp(join(tmpdir(), "aa-auditor-1-"));
   const outDir2 = await mkdtemp(join(tmpdir(), "aa-auditor-2-"));
@@ -126,6 +132,33 @@ test("integration: multi-target aggregation", async () => {
     assert.ok(
       result.report.targets.every((target) => target.screenshotPath === "https://cdn.example.com/figma-shot.png"),
     );
+  } finally {
+    await rm(outDir, { recursive: true, force: true });
+  }
+});
+
+test("integration: fetch failures still produce target manual checklist entries", async () => {
+  const outDir = await mkdtemp(join(tmpdir(), "aa-auditor-fail-"));
+
+  try {
+    const result = await runAudit(
+      {
+        targets: [{ figmaUrl: "https://www.figma.com/file/demo/checkout?node-id=1-2" }],
+        outDir,
+        config: DEFAULT_CONFIG,
+        reportFormat: "json",
+        failOn: ["blocker", "critical"],
+      },
+      {
+        figmaClient: new FailingFigmaClient(),
+        now: () => new Date("2026-02-09T12:00:00.000Z"),
+        runIdFactory: () => "run-fixed-3",
+      },
+    );
+
+    assert.equal(result.report.targets.length, 1);
+    assert.equal(result.report.manualChecks.length, 5);
+    assert.match(result.report.targets[0].warnings[0], /Fetch\/audit fallback engaged/);
   } finally {
     await rm(outDir, { recursive: true, force: true });
   }

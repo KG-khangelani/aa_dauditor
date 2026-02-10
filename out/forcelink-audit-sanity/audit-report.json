@@ -1,0 +1,26 @@
+{
+  "runId": "ab2a7b2c-a4cb-4b03-a10c-e7211009cd31",
+  "startedAt": "2026-02-10T07:59:16.490Z",
+  "finishedAt": "2026-02-10T08:00:46.632Z",
+  "wcagVersion": "2.2",
+  "level": "AA",
+  "summary": {
+    "totalTargets": 1,
+    "totalFindings": 0,
+    "suppressedFindings": 0,
+    "manualReviewFindings": 0,
+    "bySeverity": {
+      "blocker": 0,
+      "critical": 0,
+      "major": 0,
+      "minor": 0
+    },
+    "failedTargets": 0,
+    "warnings": [
+      "Target https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977 failed during fetch/audit: Failed to call MCP tool \"get_design_context\". Attempts: args={\"nodeId\":\"26027:42977\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> This operation was aborted | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> This operation was aborted | args={\"nodeId\":\"26027:42977\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> This operation was aborted | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> This operation was aborted | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26027-42977\"} -> This operation was aborted | args={\"nodeId\":\"26027:42977\"} -> This operation was aborted"
+    ]
+  },
+  "targets": [],
+  "findings": [],
+  "manualChecks": []
+}

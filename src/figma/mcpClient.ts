@@ -3,7 +3,10 @@ import { join } from "node:path";
 import type { FigmaClient, FigmaTargetPayload } from "../core/types.js";
 import { parseFigmaUrl } from "./url.js";
 import { extractDesignSystemColorsFromVariableDefs } from "./variable-colors.js";
-import { selectSublayerCandidatesFromMetadata } from "./sublayer-expansion.js";
+import {
+  selectAncestorCandidatesFromMetadata,
+  selectSublayerCandidatesFromMetadata,
+} from "./sublayer-expansion.js";
 
 interface JsonRpcResult {
   jsonrpc: "2.0";
@@ -70,24 +73,32 @@ export class RemoteFigmaMcpClient implements FigmaClient {
     await this.initialize();
 
     const warnings: string[] = [];
-
-    const designContext = await this.callToolWithFallback("get_design_context", parsed);
-
     let metadata: unknown;
+    let designContextRootNodeId = parsed.nodeId;
+
+    const designContext = await this.resolveDesignContextWithFallback(
+      parsed,
+      warnings,
+    ).then((resolved) => {
+      metadata = resolved.metadata;
+      designContextRootNodeId = resolved.nodeId;
+      return resolved.designContext;
+    });
+
     const expandedDesignContexts: Array<{ nodeId: string; context: unknown }> = [];
     if (isPossiblyTruncated(designContext)) {
-      warnings.push(
-        "Design context may be truncated; fetched metadata for fallback inspection.",
-      );
-      metadata = await this.callToolWithFallback("get_metadata", parsed).catch((err) => {
-        warnings.push(`Metadata fallback failed: ${(err as Error).message}`);
-        return undefined;
-      });
+      warnings.push("Design context may be truncated; using metadata for fallback inspection.");
+      if (metadata === undefined) {
+        metadata = await this.callToolWithFallback("get_metadata", parsed).catch((err) => {
+          warnings.push(`Metadata fallback failed: ${(err as Error).message}`);
+          return undefined;
+        });
+      }
 
       if (typeof metadata === "string") {
         const candidateNodeIds = selectSublayerCandidatesFromMetadata(
           metadata,
-          parsed.nodeId,
+          designContextRootNodeId,
           this.options.sublayerExpansionLimit,
         );
 
@@ -209,6 +220,70 @@ export class RemoteFigmaMcpClient implements FigmaClient {
     );
   }
 
+  private async resolveDesignContextWithFallback(
+    parsed: ReturnType<typeof parseFigmaUrl>,
+    warnings: string[],
+  ): Promise<{ designContext: unknown; nodeId: string; metadata?: unknown }> {
+    try {
+      const designContext = await this.callToolWithFallback("get_design_context", parsed);
+      return {
+        designContext,
+        nodeId: parsed.nodeId,
+      };
+    } catch (primaryError) {
+      warnings.push(
+        `Primary design context fetch failed for node ${parsed.nodeId}; attempting metadata/ancestor fallback.`,
+      );
+
+      const metadata = await this.callToolWithFallback("get_metadata", parsed).catch((err) => {
+        warnings.push(`Metadata fallback failed: ${(err as Error).message}`);
+        return undefined;
+      });
+
+      if (typeof metadata === "string") {
+        const ancestorCandidates = selectAncestorCandidatesFromMetadata(
+          metadata,
+          parsed.nodeId,
+          6,
+        );
+
+        for (const ancestorNodeId of ancestorCandidates) {
+          const designContext = await this.callToolWithFallback("get_design_context", {
+            ...parsed,
+            nodeId: ancestorNodeId,
+          }).catch((err) => {
+            warnings.push(
+              `Ancestor design context fetch failed for node ${ancestorNodeId}: ${(err as Error).message}`,
+            );
+            return undefined;
+          });
+
+          if (designContext !== undefined) {
+            warnings.push(
+              `Using ancestor node ${ancestorNodeId} design context because direct fetch for ${parsed.nodeId} failed.`,
+            );
+            return {
+              designContext,
+              nodeId: ancestorNodeId,
+              metadata,
+            };
+          }
+        }
+
+        warnings.push(
+          `Proceeding with metadata-only context for ${parsed.nodeId} because design-context fetch failed for node and ancestors.`,
+        );
+        return {
+          designContext: metadata,
+          nodeId: parsed.nodeId,
+          metadata,
+        };
+      }
+
+      throw primaryError;
+    }
+  }
+
   private async rpcRequest(
     method: string,
     params: unknown,
@@ -283,6 +358,7 @@ function buildArgumentCandidates(
   toolName: string,
   parsed: ReturnType<typeof parseFigmaUrl>,
 ): unknown[] {
+  const fileUrl = deriveFileUrl(parsed);
   const common = {
     nodeId: parsed.nodeId,
     clientLanguages: "typescript",
@@ -301,15 +377,58 @@ function buildArgumentCandidates(
         clientFrameworks: "node",
         artifactType: "COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN",
       },
+      ...(fileUrl
+        ? [
+            {
+              url: fileUrl,
+              nodeId: parsed.nodeId,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+              artifactType: "COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN",
+            },
+            {
+              url: fileUrl,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+              artifactType: "COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN",
+            },
+          ]
+        : []),
       common,
       {
         url: parsed.figmaUrl,
         clientLanguages: "typescript",
         clientFrameworks: "node",
       },
+      ...(fileUrl
+        ? [
+            {
+              url: fileUrl,
+              nodeId: parsed.nodeId,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+            },
+            {
+              url: fileUrl,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+            },
+          ]
+        : []),
       {
         url: parsed.figmaUrl,
       },
+      ...(fileUrl
+        ? [
+            {
+              url: fileUrl,
+              nodeId: parsed.nodeId,
+            },
+            {
+              url: fileUrl,
+            },
+          ]
+        : []),
       { nodeId: parsed.nodeId },
     ];
   }
@@ -322,9 +441,35 @@ function buildArgumentCandidates(
         clientLanguages: "typescript",
         clientFrameworks: "node",
       },
+      ...(fileUrl
+        ? [
+            {
+              url: fileUrl,
+              nodeId: parsed.nodeId,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+            },
+            {
+              url: fileUrl,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+            },
+          ]
+        : []),
       {
         url: parsed.figmaUrl,
       },
+      ...(fileUrl
+        ? [
+            {
+              url: fileUrl,
+              nodeId: parsed.nodeId,
+            },
+            {
+              url: fileUrl,
+            },
+          ]
+        : []),
       { nodeId: parsed.nodeId },
     ];
   }
@@ -338,9 +483,35 @@ function buildArgumentCandidates(
         clientLanguages: "typescript",
         clientFrameworks: "node",
       },
+      ...(fileUrl
+        ? [
+            {
+              url: fileUrl,
+              nodeId: parsed.nodeId,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+            },
+            {
+              url: fileUrl,
+              clientLanguages: "typescript",
+              clientFrameworks: "node",
+            },
+          ]
+        : []),
       {
         url: parsed.figmaUrl,
       },
+      ...(fileUrl
+        ? [
+            {
+              url: fileUrl,
+              nodeId: parsed.nodeId,
+            },
+            {
+              url: fileUrl,
+            },
+          ]
+        : []),
     ];
   }
 
@@ -374,6 +545,14 @@ function parseJsonRpcPayload(raw: string): JsonRpcResult {
   } catch {
     throw new Error(`Unable to parse MCP response payload: ${raw.slice(0, 240)}`);
   }
+}
+
+function deriveFileUrl(parsed: ReturnType<typeof parseFigmaUrl>): string | undefined {
+  if (!parsed.fileKey) {
+    return undefined;
+  }
+
+  return `https://www.figma.com/design/${parsed.fileKey}`;
 }
 
 function extractToolResult(result: ToolCallResult): unknown {
