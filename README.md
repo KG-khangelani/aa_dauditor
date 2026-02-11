@@ -14,6 +14,7 @@
 - Embedded manual checklist items in both JSON and HTML
 - Suppressions with required reason + expiry
 - CI gating via non-zero exit code when configured severities are present
+- Live terminal progress during audits (stage-by-stage with elapsed time)
 
 ## Prerequisites
 

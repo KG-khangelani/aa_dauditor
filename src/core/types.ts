@@ -183,8 +183,42 @@ export interface AuditRunOptions {
   failOn: Severity[];
 }
 
+export type AuditProgressStage =
+  | "fetch"
+  | "normalize"
+  | "screenshot"
+  | "rules"
+  | "suppressions"
+  | "manual-checklist"
+  | "target-finalize"
+  | "report";
+
+export type AuditProgressEvent =
+  | {
+      type: "run-start" | "run-end";
+      totalTargets: number;
+    }
+  | {
+      type: "target-start" | "target-end";
+      totalTargets: number;
+      targetIndex: number;
+      figmaUrl: string;
+      success?: boolean;
+      message?: string;
+    }
+  | {
+      type: "stage-start" | "stage-end";
+      totalTargets: number;
+      targetIndex: number;
+      figmaUrl: string;
+      stage: AuditProgressStage;
+      success?: boolean;
+      message?: string;
+    };
+
 export interface AuditRunDeps {
   figmaClient: FigmaClient;
   now: () => Date;
   runIdFactory: () => string;
+  onProgress?: (event: AuditProgressEvent) => void;
 }

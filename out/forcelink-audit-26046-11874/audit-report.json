@@ -1,21 +1,21 @@
 {
-  "runId": "c2a4c913-2b52-4ac6-b5bc-452328697fa0",
-  "startedAt": "2026-02-11T08:12:15.031Z",
-  "finishedAt": "2026-02-11T08:13:26.218Z",
+  "runId": "e402dc8c-b25d-4b5f-b5a0-a030b5879732",
+  "startedAt": "2026-02-11T08:55:50.972Z",
+  "finishedAt": "2026-02-11T08:57:11.099Z",
   "wcagVersion": "2.2",
   "level": "AA",
   "summary": {
     "totalTargets": 1,
-    "totalFindings": 61,
+    "totalFindings": 57,
     "suppressedFindings": 0,
     "manualReviewFindings": 57,
     "bySeverity": {
-      "blocker": 4,
+      "blocker": 0,
       "critical": 0,
       "major": 0,
       "minor": 0
     },
-    "failedTargets": 1,
+    "failedTargets": 0,
     "warnings": [
       "Figma Node 26046:11874: get_design_context returned code/text payload; switching to metadata for layer traversal."
     ]
@@ -27,66 +27,6 @@
       "frameName": "Figma Node 26046:11874",
       "screenshotPath": "/Users/khangelani/Documents/aa_dauditor/out/forcelink-audit-26046-11874/assets/26046_11874.png",
       "findings": [
-        {
-          "id": "8476160f09ad",
-          "ruleId": "WCAG-2.5.8-target-size-minimum",
-          "wcagCriterion": "2.5.8",
-          "severity": "blocker",
-          "status": "failed",
-          "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-          "evidence": "Node 26097:293628 (Resource Quick Menu Mobile Number)",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26097:293628",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number"
-          }
-        },
-        {
-          "id": "ae2656fa57dc",
-          "ruleId": "WCAG-2.5.8-target-size-minimum",
-          "wcagCriterion": "2.5.8",
-          "severity": "blocker",
-          "status": "failed",
-          "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-          "evidence": "Node 26097:293631 (Resource Quick Menu Email)",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26097:293631",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email"
-          }
-        },
-        {
-          "id": "f9ea88957cad",
-          "ruleId": "WCAG-2.5.8-target-size-minimum",
-          "wcagCriterion": "2.5.8",
-          "severity": "blocker",
-          "status": "failed",
-          "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-          "evidence": "Node 26097:293634 (Resource Quick Menu Manager)",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26097:293634",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager"
-          }
-        },
-        {
-          "id": "735f7fbc4c25",
-          "ruleId": "WCAG-2.5.8-target-size-minimum",
-          "wcagCriterion": "2.5.8",
-          "severity": "blocker",
-          "status": "failed",
-          "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-          "evidence": "Node 26097:293637 (Resource Quick Menu Employer)",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26097:293637",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer"
-          }
-        },
         {
           "id": "dc64a32648cf",
           "ruleId": "WCAG-1.4.3-text-contrast-minimum",
@@ -100,7 +40,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12036",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Header > Shift History Page Header > Shift History Page Title > Resource Page"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Header > Shift History Page Title > Resource Page"
           }
         },
         {
@@ -116,7 +56,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12037",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > RS00091"
+            "layerPath": "Tracking Map - sideOpen > Shift History > RS00091"
           }
         },
         {
@@ -132,7 +72,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12042",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -148,7 +88,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12043",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -164,7 +104,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12047",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
           }
         },
         {
@@ -180,7 +120,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12048",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
           }
         },
         {
@@ -196,7 +136,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12050",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
           }
         },
         {
@@ -212,7 +152,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12051",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
           }
         },
         {
@@ -228,7 +168,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12055",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -244,7 +184,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12056",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -260,7 +200,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12060",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
           }
         },
         {
@@ -276,7 +216,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12061",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
           }
         },
         {
@@ -292,7 +232,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12063",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
           }
         },
         {
@@ -308,7 +248,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12064",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
           }
         },
         {
@@ -324,7 +264,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12068",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -340,7 +280,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12069",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -356,7 +296,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12073",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
           }
         },
         {
@@ -372,7 +312,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12074",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
           }
         },
         {
@@ -388,7 +328,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12076",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
           }
         },
         {
@@ -404,7 +344,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12077",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
           }
         },
         {
@@ -420,7 +360,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12081",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -436,7 +376,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12082",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -452,7 +392,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12086",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
           }
         },
         {
@@ -468,7 +408,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12087",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
           }
         },
         {
@@ -484,7 +424,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12089",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
           }
         },
         {
@@ -500,7 +440,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12090",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
           }
         },
         {
@@ -516,7 +456,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12094",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -532,7 +472,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12095",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
           }
         },
         {
@@ -548,7 +488,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12099",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
           }
         },
         {
@@ -564,7 +504,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12100",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
           }
         },
         {
@@ -580,7 +520,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12102",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
           }
         },
         {
@@ -596,7 +536,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12103",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
           }
         },
         {
@@ -612,7 +552,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12117",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Position Header > Position Info > RS00091"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Position Header > Position Info > RS00091"
           }
         },
         {
@@ -628,7 +568,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12118",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Position Header > Position Info > Angel Jili"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Position Header > Position Info > Angel Jili"
           }
         },
         {
@@ -644,7 +584,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12125",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Actual Info > Position"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Actual Info > Position"
           }
         },
         {
@@ -660,7 +600,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12127",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > Time:\nDistance:"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > Time:\nDistance:"
           }
         },
         {
@@ -676,7 +616,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12128",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > 14:24\n5.8 km"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > 14:24\n5.8 km"
           }
         },
         {
@@ -692,7 +632,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12130",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Planned Info > Position"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Planned Info > Position"
           }
         },
         {
@@ -708,7 +648,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12132",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > Time:\nDistance:"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > Time:\nDistance:"
           }
         },
         {
@@ -724,7 +664,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:12133",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > 14:24\n5.8 km"
+            "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > 14:24\n5.8 km"
           }
         },
         {
@@ -740,7 +680,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26052:39178",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Component 32 > Terrain Option > Satellite"
+            "layerPath": "Tracking Map - sideOpen > Component 32 > Terrain Option > Satellite"
           }
         },
         {
@@ -756,7 +696,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26052:39181",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Component 32 > Satellite Option > Satellite"
+            "layerPath": "Tracking Map - sideOpen > Component 32 > Satellite Option > Satellite"
           }
         },
         {
@@ -772,7 +712,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26052:39184",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Component 32 > Default Option > Satellite"
+            "layerPath": "Tracking Map - sideOpen > Component 32 > Default Option > Satellite"
           }
         },
         {
@@ -788,7 +728,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293610",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Header > Resource Quick Menu Page Header > Resource Quick Menu Page Title > Resource Page"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Header > Resource Quick Menu Page Header > Resource Quick Menu Page Title > Resource Page"
           }
         },
         {
@@ -804,7 +744,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293614",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > RS00091"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > RS00091"
           }
         },
         {
@@ -820,7 +760,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293615",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
           }
         },
         {
@@ -836,7 +776,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293619",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > LIst F > Resource Quick Menu Details Header > Work Orders statuses"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > LIst F > Resource Quick Menu Details Header > Work Orders statuses"
           }
         },
         {
@@ -852,7 +792,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293624",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Full Name"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Full Name"
           }
         },
         {
@@ -868,7 +808,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293627",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Resource Quick Menu Full Name Value > Angel Jili"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Resource Quick Menu Full Name Value > Angel Jili"
           }
         },
         {
@@ -884,7 +824,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293629",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > Mobile Number"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > Mobile Number"
           }
         },
         {
@@ -900,7 +840,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293630",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > 0724418827"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > 0724418827"
           }
         },
         {
@@ -916,7 +856,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293632",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > Email"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > Email"
           }
         },
         {
@@ -932,7 +872,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293633",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > angeljili@sappi.net"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > angeljili@sappi.net"
           }
         },
         {
@@ -948,7 +888,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293635",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Manager"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Manager"
           }
         },
         {
@@ -964,7 +904,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293636",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Allen Mhatu"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Allen Mhatu"
           }
         },
         {
@@ -980,7 +920,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293638",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Employer"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Employer"
           }
         },
         {
@@ -996,7 +936,7 @@
             "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26097:293639",
             "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Sappi Khulisa"
+            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Sappi Khulisa"
           }
         }
       ],
@@ -1064,66 +1004,6 @@
   ],
   "findings": [
     {
-      "id": "8476160f09ad",
-      "ruleId": "WCAG-2.5.8-target-size-minimum",
-      "wcagCriterion": "2.5.8",
-      "severity": "blocker",
-      "status": "failed",
-      "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-      "evidence": "Node 26097:293628 (Resource Quick Menu Mobile Number)",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26097:293628",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number"
-      }
-    },
-    {
-      "id": "ae2656fa57dc",
-      "ruleId": "WCAG-2.5.8-target-size-minimum",
-      "wcagCriterion": "2.5.8",
-      "severity": "blocker",
-      "status": "failed",
-      "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-      "evidence": "Node 26097:293631 (Resource Quick Menu Email)",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26097:293631",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email"
-      }
-    },
-    {
-      "id": "f9ea88957cad",
-      "ruleId": "WCAG-2.5.8-target-size-minimum",
-      "wcagCriterion": "2.5.8",
-      "severity": "blocker",
-      "status": "failed",
-      "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-      "evidence": "Node 26097:293634 (Resource Quick Menu Manager)",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26097:293634",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager"
-      }
-    },
-    {
-      "id": "735f7fbc4c25",
-      "ruleId": "WCAG-2.5.8-target-size-minimum",
-      "wcagCriterion": "2.5.8",
-      "severity": "blocker",
-      "status": "failed",
-      "message": "Interactive target is 343.0x18.0px; minimum is 24x24px.",
-      "evidence": "Node 26097:293637 (Resource Quick Menu Employer)",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26097:293637",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer"
-      }
-    },
-    {
       "id": "dc64a32648cf",
       "ruleId": "WCAG-1.4.3-text-contrast-minimum",
       "wcagCriterion": "1.4.3",
@@ -1136,7 +1016,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12036",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Header > Shift History Page Header > Shift History Page Title > Resource Page"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Header > Shift History Page Title > Resource Page"
       }
     },
     {
@@ -1152,7 +1032,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12037",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > RS00091"
+        "layerPath": "Tracking Map - sideOpen > Shift History > RS00091"
       }
     },
     {
@@ -1168,7 +1048,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12042",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1184,7 +1064,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12043",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1200,7 +1080,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12047",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
       }
     },
     {
@@ -1216,7 +1096,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12048",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
       }
     },
     {
@@ -1232,7 +1112,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12050",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
       }
     },
     {
@@ -1248,7 +1128,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12051",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
       }
     },
     {
@@ -1264,7 +1144,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12055",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1280,7 +1160,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12056",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1296,7 +1176,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12060",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
       }
     },
     {
@@ -1312,7 +1192,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12061",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
       }
     },
     {
@@ -1328,7 +1208,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12063",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
       }
     },
     {
@@ -1344,7 +1224,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12064",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
       }
     },
     {
@@ -1360,7 +1240,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12068",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1376,7 +1256,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12069",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1392,7 +1272,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12073",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
       }
     },
     {
@@ -1408,7 +1288,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12074",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
       }
     },
     {
@@ -1424,7 +1304,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12076",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
       }
     },
     {
@@ -1440,7 +1320,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12077",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
       }
     },
     {
@@ -1456,7 +1336,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12081",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1472,7 +1352,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12082",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1488,7 +1368,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12086",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
       }
     },
     {
@@ -1504,7 +1384,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12087",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
       }
     },
     {
@@ -1520,7 +1400,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12089",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
       }
     },
     {
@@ -1536,7 +1416,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12090",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
       }
     },
     {
@@ -1552,7 +1432,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12094",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1568,7 +1448,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12095",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Header > A6 KwaZamani Farm"
       }
     },
     {
@@ -1584,7 +1464,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12099",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
       }
     },
     {
@@ -1600,7 +1480,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12100",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
       }
     },
     {
@@ -1616,7 +1496,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12102",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
       }
     },
     {
@@ -1632,7 +1512,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12103",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
+        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
       }
     },
     {
@@ -1648,7 +1528,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12117",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Position Header > Position Info > RS00091"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Position Header > Position Info > RS00091"
       }
     },
     {
@@ -1664,7 +1544,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12118",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Position Header > Position Info > Angel Jili"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Position Header > Position Info > Angel Jili"
       }
     },
     {
@@ -1680,7 +1560,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12125",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Actual Info > Position"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Actual Info > Position"
       }
     },
     {
@@ -1696,7 +1576,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12127",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > Time:\nDistance:"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > Time:\nDistance:"
       }
     },
     {
@@ -1712,7 +1592,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12128",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > 14:24\n5.8 km"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Actual Info > Actual Time Distance Values > 14:24\n5.8 km"
       }
     },
     {
@@ -1728,7 +1608,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12130",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Planned Info > Position"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Planned Info > Position"
       }
     },
     {
@@ -1744,7 +1624,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12132",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > Time:\nDistance:"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > Time:\nDistance:"
       }
     },
     {
@@ -1760,7 +1640,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:12133",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > 14:24\n5.8 km"
+        "layerPath": "Tracking Map - sideOpen > Position Container > Actual Planned Container > Planned Info > Planned Time Distance > 14:24\n5.8 km"
       }
     },
     {
@@ -1776,7 +1656,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26052:39178",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Component 32 > Terrain Option > Satellite"
+        "layerPath": "Tracking Map - sideOpen > Component 32 > Terrain Option > Satellite"
       }
     },
     {
@@ -1792,7 +1672,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26052:39181",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Component 32 > Satellite Option > Satellite"
+        "layerPath": "Tracking Map - sideOpen > Component 32 > Satellite Option > Satellite"
       }
     },
     {
@@ -1808,7 +1688,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26052:39184",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Component 32 > Default Option > Satellite"
+        "layerPath": "Tracking Map - sideOpen > Component 32 > Default Option > Satellite"
       }
     },
     {
@@ -1824,7 +1704,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293610",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Header > Resource Quick Menu Page Header > Resource Quick Menu Page Title > Resource Page"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Header > Resource Quick Menu Page Header > Resource Quick Menu Page Title > Resource Page"
       }
     },
     {
@@ -1840,7 +1720,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293614",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > RS00091"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > RS00091"
       }
     },
     {
@@ -1856,7 +1736,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293615",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
       }
     },
     {
@@ -1872,7 +1752,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293619",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > LIst F > Resource Quick Menu Details Header > Work Orders statuses"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > LIst F > Resource Quick Menu Details Header > Work Orders statuses"
       }
     },
     {
@@ -1888,7 +1768,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293624",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Full Name"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Full Name"
       }
     },
     {
@@ -1904,7 +1784,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293627",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Resource Quick Menu Full Name Value > Angel Jili"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Full Name > Resource Quick Menu Full Name Value > Angel Jili"
       }
     },
     {
@@ -1920,7 +1800,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293629",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > Mobile Number"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > Mobile Number"
       }
     },
     {
@@ -1936,7 +1816,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293630",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > 0724418827"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > 0724418827"
       }
     },
     {
@@ -1952,7 +1832,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293632",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > Email"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > Email"
       }
     },
     {
@@ -1968,7 +1848,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293633",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > angeljili@sappi.net"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Email > angeljili@sappi.net"
       }
     },
     {
@@ -1984,7 +1864,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293635",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Manager"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Manager"
       }
     },
     {
@@ -2000,7 +1880,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293636",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Allen Mhatu"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Manager > Allen Mhatu"
       }
     },
     {
@@ -2016,7 +1896,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293638",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Employer"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Employer"
       }
     },
     {
@@ -2032,7 +1912,7 @@
         "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26097:293639",
         "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Sappi Khulisa"
+        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Employer > Sappi Khulisa"
       }
     }
   ],

@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { randomUUID } from "node:crypto";
 import { loadConfig } from "./config/load.js";
 import { createDefaultConfigYaml } from "./config/schema.js";
+import { TerminalProgressRenderer } from "./cli/progress.js";
 import { runAudit } from "./core/auditRunner.js";
 import { RULE_CATALOG } from "./core/ruleCatalog.js";
 import type { ReportFormat, Severity } from "./core/types.js";
@@ -72,6 +73,7 @@ async function runAuditCommand(args: string[]): Promise<void> {
   const failOn = parsed.failOn ?? config.failOn;
 
   const figmaClient = createFigmaClientFromEnv();
+  const progress = new TerminalProgressRenderer(Boolean(process.stdout.isTTY));
 
   const result = await runAudit(
     {
@@ -85,8 +87,11 @@ async function runAuditCommand(args: string[]): Promise<void> {
       figmaClient,
       now: () => new Date(),
       runIdFactory: () => randomUUID(),
+      onProgress: (event) => progress.onEvent(event),
     },
-  );
+  ).finally(() => {
+    progress.close();
+  });
 
   console.log(`Config source: ${source}`);
   if (result.jsonPath) {

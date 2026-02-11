@@ -10,6 +10,8 @@ import { shouldFailBuild, severitySortValue } from "../severity/policy.js";
 import { applySuppressions } from "../suppressions/apply.js";
 import type {
   AuditReport,
+  AuditProgressEvent,
+  AuditProgressStage,
   AuditRunDeps,
   AuditRunOptions,
   Finding,
@@ -32,15 +34,58 @@ export async function runAudit(
   deps: AuditRunDeps,
 ): Promise<AuditRunResult> {
   const startedAt = deps.now().toISOString();
+  const totalTargets = options.targets.length;
+  emitProgress(deps, { type: "run-start", totalTargets });
   await mkdir(options.outDir, { recursive: true });
 
   const targetResults: TargetResult[] = [];
   const globalWarnings: string[] = [];
 
-  for (const target of options.targets) {
+  for (let index = 0; index < options.targets.length; index += 1) {
+    const target = options.targets[index];
+    const targetIndex = index + 1;
+    emitProgress(deps, {
+      type: "target-start",
+      totalTargets,
+      targetIndex,
+      figmaUrl: target.figmaUrl,
+    });
+
+    let currentStage: AuditProgressStage | undefined;
+    const startStage = (stage: AuditProgressStage): void => {
+      currentStage = stage;
+      emitProgress(deps, {
+        type: "stage-start",
+        totalTargets,
+        targetIndex,
+        figmaUrl: target.figmaUrl,
+        stage,
+      });
+    };
+    const endStage = (success = true, message?: string): void => {
+      if (!currentStage) {
+        return;
+      }
+      emitProgress(deps, {
+        type: "stage-end",
+        totalTargets,
+        targetIndex,
+        figmaUrl: target.figmaUrl,
+        stage: currentStage,
+        success,
+        message,
+      });
+      currentStage = undefined;
+    };
+
     try {
+      startStage("fetch");
       const payload = await deps.figmaClient.fetchTarget(target.figmaUrl);
+      endStage();
+
+      startStage("normalize");
       const normalized = normalizeTarget(payload);
+      endStage();
       const designSystemColors = {
         ...(payload.designSystemColors ?? {}),
         ...options.config.designSystemColors,
@@ -48,10 +93,12 @@ export async function runAudit(
 
       let screenshotPath: string | undefined;
       if (options.config.report.includeScreenshots) {
+        startStage("screenshot");
         screenshotPath = await persistScreenshot(
           payload,
           join(options.outDir, "assets"),
         );
+        endStage();
       }
 
       const enabledRules = RULES.filter((rule) => {
@@ -59,6 +106,7 @@ export async function runAudit(
         return config ? config.enabled : true;
       });
 
+      startStage("rules");
       const rawFindings = executeRules(
         {
           target: normalized,
@@ -67,6 +115,7 @@ export async function runAudit(
         },
         enabledRules,
       );
+      endStage();
 
       const severityAdjusted = rawFindings.map((finding) => {
         const cfg = options.config.rules[finding.ruleId];
@@ -80,14 +129,19 @@ export async function runAudit(
         };
       });
 
+      startStage("suppressions");
       const suppressionResult = applySuppressions(
         severityAdjusted,
         options.config.suppressions,
         deps.now(),
       );
+      endStage();
 
+      startStage("manual-checklist");
       const manualChecks = buildManualChecklist(normalized);
+      endStage();
 
+      startStage("target-finalize");
       targetResults.push({
         figmaUrl: target.figmaUrl,
         nodeId: normalized.nodeId,
@@ -97,10 +151,27 @@ export async function runAudit(
         manualChecks,
         warnings: [...normalized.warnings, ...suppressionResult.warnings],
       });
+      endStage();
+      emitProgress(deps, {
+        type: "target-end",
+        totalTargets,
+        targetIndex,
+        figmaUrl: target.figmaUrl,
+        success: true,
+      });
     } catch (error) {
+      endStage(false, (error as Error).message);
       targetResults.push(
         buildFetchFailureTargetResult(target.figmaUrl, (error as Error).message),
       );
+      emitProgress(deps, {
+        type: "target-end",
+        totalTargets,
+        targetIndex,
+        figmaUrl: target.figmaUrl,
+        success: false,
+        message: (error as Error).message,
+      });
     }
   }
 
@@ -142,6 +213,13 @@ export async function runAudit(
 
   let jsonPath: string | undefined;
   let htmlPath: string | undefined;
+  emitProgress(deps, {
+    type: "stage-start",
+    totalTargets,
+    targetIndex: totalTargets,
+    figmaUrl: options.targets[0]?.figmaUrl ?? "",
+    stage: "report",
+  });
 
   if (options.reportFormat === "json" || options.reportFormat === "both") {
     jsonPath = await writeJsonReport(options.outDir, report);
@@ -150,6 +228,15 @@ export async function runAudit(
   if (options.reportFormat === "html" || options.reportFormat === "both") {
     htmlPath = await writeHtmlReport(options.outDir, report);
   }
+  emitProgress(deps, {
+    type: "stage-end",
+    totalTargets,
+    targetIndex: totalTargets,
+    figmaUrl: options.targets[0]?.figmaUrl ?? "",
+    stage: "report",
+    success: true,
+  });
+  emitProgress(deps, { type: "run-end", totalTargets });
 
   return {
     report,
@@ -157,6 +244,10 @@ export async function runAudit(
     jsonPath,
     htmlPath,
   };
+}
+
+function emitProgress(deps: AuditRunDeps, event: AuditProgressEvent): void {
+  deps.onProgress?.(event);
 }
 
 function countBySeverity(findings: Finding[]): Record<Severity, number> {
