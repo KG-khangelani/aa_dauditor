@@ -1,14 +1,14 @@
 {
-  "runId": "57c1380c-6127-494f-8da4-a279c9757eff",
-  "startedAt": "2026-02-10T10:26:05.325Z",
-  "finishedAt": "2026-02-10T10:26:05.725Z",
+  "runId": "f20886d1-6530-4c32-a3a0-32012046bf83",
+  "startedAt": "2026-02-11T06:26:43.183Z",
+  "finishedAt": "2026-02-11T06:26:47.572Z",
   "wcagVersion": "2.2",
   "level": "AA",
   "summary": {
     "totalTargets": 1,
-    "totalFindings": 0,
+    "totalFindings": 56,
     "suppressedFindings": 0,
-    "manualReviewFindings": 0,
+    "manualReviewFindings": 56,
     "bySeverity": {
       "blocker": 0,
       "critical": 0,
@@ -17,22 +17,920 @@
     },
     "failedTargets": 0,
     "warnings": [
-      "Figma Node 26046:11874: Fetch/audit fallback engaged: Failed to call MCP tool \"get_design_context\". Attempts: args={\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"nodeId\":\"26046:11874\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"nodeId\":\"26046:11874\"} -> The MCP server tools are only available for design, FigJam, and Make files."
+      "Figma Node 26046:11874: get_design_context returned code/text payload; switching to metadata for layer traversal."
     ]
   },
   "targets": [
     {
-      "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+      "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
       "nodeId": "26046:11874",
       "frameName": "Figma Node 26046:11874",
-      "findings": [],
+      "screenshotPath": "/Users/khangelani/Documents/aa_dauditor/out/forcelink-audit-26046-11874/assets/26046_11874.png",
+      "findings": [
+        {
+          "id": "cf9a69fc17c1",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:11909 (Resource Page) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:11909",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 4022 > Resource Page"
+          }
+        },
+        {
+          "id": "92685748ad67",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:11913 (RS00091) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:11913",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > RS00091"
+          }
+        },
+        {
+          "id": "e114a8453e89",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:11914 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:11914",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+          }
+        },
+        {
+          "id": "322f125e2595",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:11997 (Full Name) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:11997",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Full Name"
+          }
+        },
+        {
+          "id": "ffc9da080e09",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12000 (Angel Jili) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12000",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Frame 15813 > Angel Jili"
+          }
+        },
+        {
+          "id": "2d736f66bc55",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12002 (Mobile Number) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12002",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Mobile Number"
+          }
+        },
+        {
+          "id": "778cbbaa8c2d",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12003 (0724418827) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12003",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > 0724418827"
+          }
+        },
+        {
+          "id": "234cd30cadc6",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12005 (Email) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12005",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Email"
+          }
+        },
+        {
+          "id": "72b84ac3ae3e",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12006 (angeljili@sappi.net) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12006",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > angeljili@sappi.net"
+          }
+        },
+        {
+          "id": "10a65339a0f7",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12008 (Manager) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12008",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Manager"
+          }
+        },
+        {
+          "id": "6b3c63214f0f",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12009 (Allen Mhatu) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12009",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Allen Mhatu"
+          }
+        },
+        {
+          "id": "0dfcf37fed96",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12011 (Employer) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12011",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Employer"
+          }
+        },
+        {
+          "id": "bb152d497fca",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12012 (Sappi Khulisa) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12012",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Sappi Khulisa"
+          }
+        },
+        {
+          "id": "dc64a32648cf",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12036 (Resource Page) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12036",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 15812 > Group 4022 > Group 3892 > Resource Page"
+          }
+        },
+        {
+          "id": "eb99de540ba3",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12037 (RS00091) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12037",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > RS00091"
+          }
+        },
+        {
+          "id": "829348401b7d",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12042 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12042",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "9c12e0d547d4",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12043 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12043",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "99f50ede49af",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12047 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12047",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > Start:"
+          }
+        },
+        {
+          "id": "696be6e84479",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12048 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12048",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "acbe4da5f2cd",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12050 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12050",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > End:"
+          }
+        },
+        {
+          "id": "c69861defa27",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12051 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12051",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "5a7a9e6fe6b5",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12055 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12055",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "beeef17c7420",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12056 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12056",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "50582264d5a3",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12060 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12060",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > Start:"
+          }
+        },
+        {
+          "id": "e2aaa868e4f4",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12061 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12061",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "d402fdfd1889",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12063 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12063",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > End:"
+          }
+        },
+        {
+          "id": "7f445491dc32",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12064 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12064",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "ba618c7c4378",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12068 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12068",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "2a42598561e3",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12069 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12069",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "cdc70373a23c",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12073 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12073",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > Start:"
+          }
+        },
+        {
+          "id": "1a9ca8bca5da",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12074 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12074",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "3be9d7faf952",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12076 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12076",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > End:"
+          }
+        },
+        {
+          "id": "bc7c1365b3f2",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12077 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12077",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "605f1a874854",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12081 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12081",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "4b5d6999fd74",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12082 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12082",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "4a2ca9099ccc",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12086 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12086",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > Start:"
+          }
+        },
+        {
+          "id": "b40894d70b1c",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12087 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12087",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "e9d10799ec35",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12089 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12089",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > End:"
+          }
+        },
+        {
+          "id": "0e7332802f78",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12090 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12090",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "971a04e2dafc",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12094 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12094",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "82bc66666c80",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12095 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12095",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > A6 KwaZamani Farm"
+          }
+        },
+        {
+          "id": "48225ef601ae",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12099 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12099",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > Start:"
+          }
+        },
+        {
+          "id": "76ecef183a13",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12100 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12100",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "1ed745ac23b4",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12102 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12102",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > End:"
+          }
+        },
+        {
+          "id": "6645224e4987",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12103 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12103",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > Active"
+          }
+        },
+        {
+          "id": "7b8cbd1b27b4",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12117 (RS00091) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12117",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 15817 > RS00091"
+          }
+        },
+        {
+          "id": "e6af34ea7bc8",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12118 (Angel Jili) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12118",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 15817 > Angel Jili"
+          }
+        },
+        {
+          "id": "0acb13e92c3a",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12125 (Position) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12125",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4007 > Group 15814 > Position"
+          }
+        },
+        {
+          "id": "96e79df6f176",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12127 (Time:\nDistance:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12127",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4007 > Group 15815 > Time:\nDistance:"
+          }
+        },
+        {
+          "id": "62a44131b32f",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12128 (14:24\n5.8 km) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12128",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4007 > Group 15815 > 14:24\n5.8 km"
+          }
+        },
+        {
+          "id": "4792b2c2ab0d",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12130 (Position) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12130",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4008 > Position"
+          }
+        },
+        {
+          "id": "52c64d0e241a",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12132 (Time:\nDistance:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12132",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4008 > Group 15815 > Time:\nDistance:"
+          }
+        },
+        {
+          "id": "b723514ed427",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26046:12133 (14:24\n5.8 km) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26046:12133",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4008 > Group 15815 > 14:24\n5.8 km"
+          }
+        },
+        {
+          "id": "385feac336ef",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26052:39178 (Satellite) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26052:39178",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Component 32 > Frame 4007 > Satellite"
+          }
+        },
+        {
+          "id": "a2a109690ff5",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26052:39181 (Satellite) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26052:39181",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Component 32 > Frame 4005 > Satellite"
+          }
+        },
+        {
+          "id": "1f93815e70ba",
+          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+          "wcagCriterion": "1.4.3",
+          "severity": "critical",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+          "evidence": "Node 26052:39184 (Satellite) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+          "targetRef": {
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+            "nodeId": "26052:39184",
+            "frameName": "Figma Node 26046:11874",
+            "layerPath": "Tracking Map  > Component 32 > Frame 4006 > Satellite"
+          }
+        }
+      ],
       "manualChecks": [
         {
           "id": "23573ab14085",
           "wcagCriterion": "1.3.1",
           "prompt": "Verify structure and relationships are programmatically determinable (headings, grouped controls, labels).",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:11874",
             "frameName": "Figma Node 26046:11874",
             "layerPath": "Figma Node 26046:11874"
@@ -43,7 +941,7 @@
           "wcagCriterion": "1.4.1",
           "prompt": "Verify color is not the only means used to convey state or meaning.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:11874",
             "frameName": "Figma Node 26046:11874",
             "layerPath": "Figma Node 26046:11874"
@@ -54,7 +952,7 @@
           "wcagCriterion": "2.4.7",
           "prompt": "Verify focus indicators are clearly visible for all interactive components.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:11874",
             "frameName": "Figma Node 26046:11874",
             "layerPath": "Figma Node 26046:11874"
@@ -65,7 +963,7 @@
           "wcagCriterion": "2.4.11",
           "prompt": "Verify focused elements are not fully obscured by fixed/sticky UI.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:11874",
             "frameName": "Figma Node 26046:11874",
             "layerPath": "Figma Node 26046:11874"
@@ -76,7 +974,7 @@
           "wcagCriterion": "3.3.2",
           "prompt": "Verify form controls include persistent labels/instructions and clear error guidance.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
             "nodeId": "26046:11874",
             "frameName": "Figma Node 26046:11874",
             "layerPath": "Figma Node 26046:11874"
@@ -84,18 +982,915 @@
         }
       ],
       "warnings": [
-        "Fetch/audit fallback engaged: Failed to call MCP tool \"get_design_context\". Attempts: args={\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\",\"artifactType\":\"COMPONENT_WITHIN_A_WEB_PAGE_OR_APP_SCREEN\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"nodeId\":\"26046:11874\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"clientLanguages\":\"typescript\",\"clientFrameworks\":\"node\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\",\"nodeId\":\"26046:11874\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"url\":\"https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO\"} -> The MCP server tools are only available for design, FigJam, and Make files. | args={\"nodeId\":\"26046:11874\"} -> The MCP server tools are only available for design, FigJam, and Make files."
+        "get_design_context returned code/text payload; switching to metadata for layer traversal."
       ]
     }
   ],
-  "findings": [],
+  "findings": [
+    {
+      "id": "cf9a69fc17c1",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:11909 (Resource Page) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:11909",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 4022 > Resource Page"
+      }
+    },
+    {
+      "id": "92685748ad67",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:11913 (RS00091) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:11913",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > RS00091"
+      }
+    },
+    {
+      "id": "e114a8453e89",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:11914 (Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:11914",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Address: 18 Marry Road, Sterkspruit, Eastern Cape, 8790\nCo-ordinates: -33.92416480828953, 18.837300633699826"
+      }
+    },
+    {
+      "id": "322f125e2595",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:11997 (Full Name) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:11997",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Full Name"
+      }
+    },
+    {
+      "id": "ffc9da080e09",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12000 (Angel Jili) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12000",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Frame 15813 > Angel Jili"
+      }
+    },
+    {
+      "id": "2d736f66bc55",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12002 (Mobile Number) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12002",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Mobile Number"
+      }
+    },
+    {
+      "id": "778cbbaa8c2d",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12003 (0724418827) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12003",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > 0724418827"
+      }
+    },
+    {
+      "id": "234cd30cadc6",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12005 (Email) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12005",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Email"
+      }
+    },
+    {
+      "id": "72b84ac3ae3e",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12006 (angeljili@sappi.net) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12006",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > angeljili@sappi.net"
+      }
+    },
+    {
+      "id": "10a65339a0f7",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12008 (Manager) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12008",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Manager"
+      }
+    },
+    {
+      "id": "6b3c63214f0f",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12009 (Allen Mhatu) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12009",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Allen Mhatu"
+      }
+    },
+    {
+      "id": "0dfcf37fed96",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12011 (Employer) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12011",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Employer"
+      }
+    },
+    {
+      "id": "bb152d497fca",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12012 (Sappi Khulisa) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12012",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Resource-single-selection-quick-menu > Frame 4084 > Frame 15812 > Frame 15815 > Sappi Khulisa"
+      }
+    },
+    {
+      "id": "dc64a32648cf",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12036 (Resource Page) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12036",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 15812 > Group 4022 > Group 3892 > Resource Page"
+      }
+    },
+    {
+      "id": "eb99de540ba3",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12037 (RS00091) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12037",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > RS00091"
+      }
+    },
+    {
+      "id": "829348401b7d",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12042 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12042",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "9c12e0d547d4",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12043 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12043",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "99f50ede49af",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12047 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12047",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > Start:"
+      }
+    },
+    {
+      "id": "696be6e84479",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12048 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12048",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "acbe4da5f2cd",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12050 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12050",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > End:"
+      }
+    },
+    {
+      "id": "c69861defa27",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12051 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12051",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3963 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "5a7a9e6fe6b5",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12055 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12055",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "beeef17c7420",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12056 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12056",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "50582264d5a3",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12060 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12060",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > Start:"
+      }
+    },
+    {
+      "id": "e2aaa868e4f4",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12061 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12061",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "d402fdfd1889",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12063 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12063",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > End:"
+      }
+    },
+    {
+      "id": "7f445491dc32",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12064 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12064",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3965 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "ba618c7c4378",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12068 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12068",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "2a42598561e3",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12069 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12069",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "cdc70373a23c",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12073 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12073",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > Start:"
+      }
+    },
+    {
+      "id": "1a9ca8bca5da",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12074 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12074",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "3be9d7faf952",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12076 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12076",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > End:"
+      }
+    },
+    {
+      "id": "bc7c1365b3f2",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12077 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12077",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3966 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "605f1a874854",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12081 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12081",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "4b5d6999fd74",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12082 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12082",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "4a2ca9099ccc",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12086 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12086",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > Start:"
+      }
+    },
+    {
+      "id": "b40894d70b1c",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12087 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12087",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "e9d10799ec35",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12089 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12089",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > End:"
+      }
+    },
+    {
+      "id": "0e7332802f78",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12090 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12090",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3967 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "971a04e2dafc",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12094 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12094",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "82bc66666c80",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12095 (A6 KwaZamani Farm) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12095",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > A6 KwaZamani Farm"
+      }
+    },
+    {
+      "id": "48225ef601ae",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12099 (Start:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12099",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > Start:"
+      }
+    },
+    {
+      "id": "76ecef183a13",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12100 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12100",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "1ed745ac23b4",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12102 (End:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12102",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > End:"
+      }
+    },
+    {
+      "id": "6645224e4987",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12103 (Active) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12103",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Shift History > Frame 3966 > Frame 3968 > Frame 15814 > Frame 15814 > Active"
+      }
+    },
+    {
+      "id": "7b8cbd1b27b4",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12117 (RS00091) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12117",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 15817 > RS00091"
+      }
+    },
+    {
+      "id": "e6af34ea7bc8",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12118 (Angel Jili) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12118",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 15817 > Angel Jili"
+      }
+    },
+    {
+      "id": "0acb13e92c3a",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12125 (Position) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12125",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4007 > Group 15814 > Position"
+      }
+    },
+    {
+      "id": "96e79df6f176",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12127 (Time:\nDistance:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12127",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4007 > Group 15815 > Time:\nDistance:"
+      }
+    },
+    {
+      "id": "62a44131b32f",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12128 (14:24\n5.8 km) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12128",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4007 > Group 15815 > 14:24\n5.8 km"
+      }
+    },
+    {
+      "id": "4792b2c2ab0d",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12130 (Position) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12130",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4008 > Position"
+      }
+    },
+    {
+      "id": "52c64d0e241a",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12132 (Time:\nDistance:) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12132",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4008 > Group 15815 > Time:\nDistance:"
+      }
+    },
+    {
+      "id": "b723514ed427",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26046:12133 (14:24\n5.8 km) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26046:12133",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Frame 15816 > Frame 15817 > Frame 4008 > Group 15815 > 14:24\n5.8 km"
+      }
+    },
+    {
+      "id": "385feac336ef",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26052:39178 (Satellite) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26052:39178",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Component 32 > Frame 4007 > Satellite"
+      }
+    },
+    {
+      "id": "a2a109690ff5",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26052:39181 (Satellite) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26052:39181",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Component 32 > Frame 4005 > Satellite"
+      }
+    },
+    {
+      "id": "1f93815e70ba",
+      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
+      "wcagCriterion": "1.4.3",
+      "severity": "critical",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Blue (Daybreak)/blue-1 (#E6F7FF); Base Color Palettes/Green/green-1 (#F6FFED); Base Color Palettes/Green/green-4 (#95DE64); Base Color Palettes/Green/green-6 (#52C41A); Base Color Palettes/Orange/orange-1 (#FFF7E6).",
+      "evidence": "Node 26052:39184 (Satellite) | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
+      "targetRef": {
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
+        "nodeId": "26052:39184",
+        "frameName": "Figma Node 26046:11874",
+        "layerPath": "Tracking Map  > Component 32 > Frame 4006 > Satellite"
+      }
+    }
+  ],
   "manualChecks": [
     {
       "id": "23573ab14085",
       "wcagCriterion": "1.3.1",
       "prompt": "Verify structure and relationships are programmatically determinable (headings, grouped controls, labels).",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:11874",
         "frameName": "Figma Node 26046:11874",
         "layerPath": "Figma Node 26046:11874"
@@ -106,7 +1901,7 @@
       "wcagCriterion": "1.4.1",
       "prompt": "Verify color is not the only means used to convey state or meaning.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:11874",
         "frameName": "Figma Node 26046:11874",
         "layerPath": "Figma Node 26046:11874"
@@ -117,7 +1912,7 @@
       "wcagCriterion": "2.4.11",
       "prompt": "Verify focused elements are not fully obscured by fixed/sticky UI.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:11874",
         "frameName": "Figma Node 26046:11874",
         "layerPath": "Figma Node 26046:11874"
@@ -128,7 +1923,7 @@
       "wcagCriterion": "2.4.7",
       "prompt": "Verify focus indicators are clearly visible for all interactive components.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:11874",
         "frameName": "Figma Node 26046:11874",
         "layerPath": "Figma Node 26046:11874"
@@ -139,7 +1934,7 @@
       "wcagCriterion": "3.3.2",
       "prompt": "Verify form controls include persistent labels/instructions and clear error guidance.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=6GZmZTIvu4dBXzKi-4",
+        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
         "nodeId": "26046:11874",
         "frameName": "Figma Node 26046:11874",
         "layerPath": "Figma Node 26046:11874"

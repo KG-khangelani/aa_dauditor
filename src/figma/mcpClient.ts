@@ -201,7 +201,7 @@ export class RemoteFigmaMcpClient implements FigmaClient {
     let metadata: unknown;
     let designContextRootNodeId = parsed.nodeId;
 
-    const designContext = await this.resolveDesignContextWithFallback(
+    let designContext = await this.resolveDesignContextWithFallback(
       parsed,
       warnings,
     ).then((resolved) => {
@@ -209,6 +209,23 @@ export class RemoteFigmaMcpClient implements FigmaClient {
       designContextRootNodeId = resolved.nodeId;
       return resolved.designContext;
     });
+
+    if (typeof designContext === "string" && !isLikelyMetadataXml(designContext)) {
+      warnings.push(
+        "get_design_context returned code/text payload; switching to metadata for layer traversal.",
+      );
+      if (metadata === undefined) {
+        metadata = await this.callToolWithFallback("get_metadata", parsed).catch((err) => {
+          warnings.push(`Metadata fallback failed: ${(err as Error).message}`);
+          return undefined;
+        });
+      }
+
+      if (typeof metadata === "string") {
+        designContext = metadata;
+        designContextRootNodeId = parsed.nodeId;
+      }
+    }
 
     const expandedDesignContexts: Array<{ nodeId: string; context: unknown }> = [];
     if (isPossiblyTruncated(designContext)) {
@@ -892,6 +909,14 @@ function isPossiblyTruncated(payload: unknown): boolean {
   return /truncated|omitted|too large to fit into context/i.test(
     serialized.slice(0, 8000),
   );
+}
+
+function isLikelyMetadataXml(value: string): boolean {
+  const trimmed = value.trim();
+  if (!trimmed.startsWith("<")) {
+    return false;
+  }
+  return /<[a-zA-Z0-9_-]+[^>]*\bid="/.test(trimmed);
 }
 
 async function parseScreenshotPayload(
