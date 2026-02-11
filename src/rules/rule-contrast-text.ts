@@ -30,7 +30,11 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
   for (const node of likelyTextNodes(ctx.target)) {
     const fg = firstFill(node);
     const bgResolution = resolveEffectiveBackground(ctx.target, node);
-    const bg = bgResolution.color;
+    const sampledBg =
+      !bgResolution.color && ctx.sampleBackgroundColor && fg
+        ? ctx.sampleBackgroundColor(node, fg)
+        : undefined;
+    const bg = bgResolution.color ?? sampledBg;
     const layerPath = layerPathForNode(ctx.target, node);
 
     if (!fg || !bg) {
@@ -51,6 +55,9 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
           `Node ${node.id} (${node.name})`,
           bgResolution.sourceLayerPath
             ? `backgroundSource=${bgResolution.sourceLayerPath}`
+            : undefined,
+          !bgResolution.sourceLayerPath && sampledBg
+            ? "backgroundSource=[screenshot-sampling]"
             : undefined,
           bgResolution.reason ? `backgroundReason=${bgResolution.reason}` : undefined,
         ]
@@ -100,6 +107,9 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
         `backgroundColor=${colorToString(bg)}`,
         bgResolution.sourceLayerPath
           ? `backgroundSource=${bgResolution.sourceLayerPath}`
+          : undefined,
+        !bgResolution.sourceLayerPath && sampledBg
+          ? "backgroundSource=[screenshot-sampling]"
           : undefined,
       ]
         .filter(Boolean)

@@ -38,6 +38,8 @@ export function normalizeTarget(payload: FigmaTargetPayload): NormalizedTarget {
     frameName: payload.frameName,
     nodes,
     warnings: [...payload.warnings],
+    contextSource: payload.contextSource ?? "design-context",
+    fallbackBackgroundColor: payload.fallbackBackgroundColor,
   };
 }
 
@@ -69,7 +71,10 @@ function collectNormalizedNodes(payload: FigmaTargetPayload): NormalizedNode[] {
     walkMaybeNode(expansionSource, rawNodes, payload.nodeId);
   }
 
-  return mergeNodesById(rawNodes);
+  return applyNodeStyleHints(
+    mergeNodesById(rawNodes),
+    payload.nodeStyleHints,
+  );
 }
 
 function parseXmlMetadataNodes(
@@ -170,6 +175,32 @@ function mergeNodesById(nodes: NormalizedNode[]): NormalizedNode[] {
   }
 
   return [...merged.values()];
+}
+
+function applyNodeStyleHints(
+  nodes: NormalizedNode[],
+  hints: FigmaTargetPayload["nodeStyleHints"],
+): NormalizedNode[] {
+  if (!hints || Object.keys(hints).length === 0) {
+    return nodes;
+  }
+
+  return nodes.map((node) => {
+    const hint = hints[node.id];
+    if (!hint) {
+      return node;
+    }
+
+    const textLike = node.type.toUpperCase() === "TEXT" || typeof node.text === "string";
+    const hintedFillColors =
+      textLike && hint.textFills.length > 0 ? hint.textFills : hint.fills;
+
+    return {
+      ...node,
+      fills: node.fills.length > 0 ? node.fills : hintedFillColors,
+      strokes: node.strokes.length > 0 ? node.strokes : hint.strokes,
+    };
+  });
 }
 
 function richerString(a?: string, b?: string): string | undefined {

@@ -113,12 +113,18 @@ export interface NormalizedTarget {
   frameName: string;
   nodes: NormalizedNode[];
   warnings: string[];
+  contextSource?: "design-context" | "metadata-fallback";
+  fallbackBackgroundColor?: NormalizedColor;
 }
 
 export interface RuleEvaluationContext {
   target: NormalizedTarget;
   reportStartIso: string;
   designSystemColors?: Record<string, string>;
+  sampleBackgroundColor?: (
+    node: NormalizedNode,
+    foreground?: NormalizedColor,
+  ) => NormalizedColor | undefined;
 }
 
 export interface RuleDefinition {
@@ -169,6 +175,16 @@ export interface FigmaTargetPayload {
     sourceUrl?: string;
   };
   warnings: string[];
+  contextSource?: "design-context" | "metadata-fallback";
+  nodeStyleHints?: Record<
+    string,
+    {
+      fills: NormalizedColor[];
+      textFills: NormalizedColor[];
+      strokes: NormalizedColor[];
+    }
+  >;
+  fallbackBackgroundColor?: NormalizedColor;
 }
 
 export interface FigmaClient {

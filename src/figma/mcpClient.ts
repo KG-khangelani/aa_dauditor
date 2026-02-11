@@ -7,6 +7,10 @@ import {
   selectAncestorCandidatesFromMetadata,
   selectSublayerCandidatesFromMetadata,
 } from "./sublayer-expansion.js";
+import {
+  extractDocumentBackgroundHintFromCode,
+  extractNodeStyleHintsFromCode,
+} from "./code-style-hints.js";
 
 interface JsonRpcResult {
   jsonrpc: "2.0";
@@ -200,6 +204,10 @@ export class RemoteFigmaMcpClient implements FigmaClient {
     const warnings: string[] = [];
     let metadata: unknown;
     let designContextRootNodeId = parsed.nodeId;
+    let contextSource: "design-context" | "metadata-fallback" = "design-context";
+    let nodeStyleHints: FigmaTargetPayload["nodeStyleHints"];
+    let fallbackBackgroundColor: FigmaTargetPayload["fallbackBackgroundColor"];
+    let codeStyleSource: string | undefined;
 
     let designContext = await this.resolveDesignContextWithFallback(
       parsed,
@@ -207,10 +215,12 @@ export class RemoteFigmaMcpClient implements FigmaClient {
     ).then((resolved) => {
       metadata = resolved.metadata;
       designContextRootNodeId = resolved.nodeId;
+      contextSource = resolved.contextSource;
       return resolved.designContext;
     });
 
     if (typeof designContext === "string" && !isLikelyMetadataXml(designContext)) {
+      codeStyleSource = designContext;
       warnings.push(
         "get_design_context returned code/text payload; switching to metadata for layer traversal.",
       );
@@ -224,6 +234,7 @@ export class RemoteFigmaMcpClient implements FigmaClient {
       if (typeof metadata === "string") {
         designContext = metadata;
         designContextRootNodeId = parsed.nodeId;
+        contextSource = "metadata-fallback";
       }
     }
 
@@ -286,6 +297,16 @@ export class RemoteFigmaMcpClient implements FigmaClient {
     );
 
     const designSystemColors = extractDesignSystemColorsFromVariableDefs(variableDefs);
+    if (codeStyleSource) {
+      nodeStyleHints = extractNodeStyleHintsFromCode(
+        codeStyleSource,
+        designSystemColors,
+      );
+      fallbackBackgroundColor = extractDocumentBackgroundHintFromCode(
+        codeStyleSource,
+        designSystemColors,
+      );
+    }
 
     const screenshot = await parseScreenshotPayload(screenshotPayload, warnings);
 
@@ -305,6 +326,9 @@ export class RemoteFigmaMcpClient implements FigmaClient {
       designSystemColors,
       screenshot,
       warnings,
+      contextSource,
+      nodeStyleHints,
+      fallbackBackgroundColor,
     };
   }
 
@@ -365,12 +389,18 @@ export class RemoteFigmaMcpClient implements FigmaClient {
   private async resolveDesignContextWithFallback(
     parsed: ReturnType<typeof parseFigmaUrl>,
     warnings: string[],
-  ): Promise<{ designContext: unknown; nodeId: string; metadata?: unknown }> {
+  ): Promise<{
+    designContext: unknown;
+    nodeId: string;
+    metadata?: unknown;
+    contextSource: "design-context" | "metadata-fallback";
+  }> {
     try {
       const designContext = await this.callToolWithFallback("get_design_context", parsed);
       return {
         designContext,
         nodeId: parsed.nodeId,
+        contextSource: "design-context",
       };
     } catch (primaryError) {
       warnings.push(
@@ -408,6 +438,7 @@ export class RemoteFigmaMcpClient implements FigmaClient {
               designContext,
               nodeId: ancestorNodeId,
               metadata,
+              contextSource: "design-context",
             };
           }
         }
@@ -419,6 +450,7 @@ export class RemoteFigmaMcpClient implements FigmaClient {
           designContext: metadata,
           nodeId: parsed.nodeId,
           metadata,
+          contextSource: "metadata-fallback",
         };
       }
 

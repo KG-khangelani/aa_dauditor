@@ -121,6 +121,8 @@ When a text/non-text contrast rule fails, the report includes variable-aware fix
 - `Fix B`: swap background to a passing design-system variable (opaque tokens only).
 - `Fix C`: swap both foreground and background to the closest passing variable pair.
 
+When MCP returns code/text design context, the auditor falls back to metadata traversal and extracts per-node color hints from returned code classes (`data-node-id`) to reduce contrast noise. Report warnings indicate when fallback mode was used.
+
 ### Exit codes
 
 - `0`: audit succeeded and no gate-triggering violations
