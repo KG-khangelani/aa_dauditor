@@ -49,10 +49,66 @@ test("createScreenshotBackgroundSampler samples background around text bounds", 
   assert.equal(sampled?.b, 250);
 });
 
+test("createScreenshotBackgroundSampler ignores diagonal-only corner pixels around text", () => {
+  const diagonalPoints = new Set(["4,4", "18,4", "4,18", "18,18"]);
+  const pngBytes = buildPng(24, 24, (x, y) =>
+    diagonalPoints.has(`${x},${y}`)
+      ? { r: 255, g: 0, b: 0, a: 255 }
+      : { r: 0, g: 0, b: 0, a: 0 },
+  );
+
+  const target: NormalizedTarget = {
+    figmaUrl: "https://www.figma.com/file/demo?node-id=1-1",
+    nodeId: "1:1",
+    frameName: "Demo",
+    warnings: [],
+    nodes: [
+      {
+        id: "1:1",
+        name: "Root",
+        type: "FRAME",
+        bounds: { x: 0, y: 0, width: 24, height: 24 },
+        fills: [],
+        strokes: [],
+        isInteractive: false,
+      },
+      {
+        id: "1:2",
+        parentId: "1:1",
+        name: "Resource Page",
+        type: "TEXT",
+        bounds: { x: 8, y: 8, width: 8, height: 8 },
+        fills: [{ r: 16, g: 43, b: 124, a: 1 }],
+        strokes: [],
+        text: "Resource Page",
+        isInteractive: false,
+      },
+    ],
+  };
+
+  const sampler = createScreenshotBackgroundSampler(target, {
+    bytes: pngBytes,
+    ext: "png",
+  });
+  assert.ok(sampler);
+
+  const node = target.nodes.find((entry) => entry.id === "1:2")!;
+  const sampled = sampler!(node, node.fills[0]);
+  assert.equal(sampled, undefined);
+});
+
 function buildSolidPng(
   width: number,
   height: number,
   color: { r: number; g: number; b: number; a: number },
+): Uint8Array {
+  return buildPng(width, height, () => color);
+}
+
+function buildPng(
+  width: number,
+  height: number,
+  pixel: (x: number, y: number) => { r: number; g: number; b: number; a: number },
 ): Uint8Array {
   const signature = Buffer.from("89504e470d0a1a0a", "hex");
 
@@ -70,11 +126,12 @@ function buildSolidPng(
     const rowStart = y * (1 + width * 4);
     raw[rowStart] = 0; // filter type: None
     for (let x = 0; x < width; x += 1) {
+      const p = pixel(x, y);
       const px = rowStart + 1 + x * 4;
-      raw[px] = color.r;
-      raw[px + 1] = color.g;
-      raw[px + 2] = color.b;
-      raw[px + 3] = color.a;
+      raw[px] = p.r;
+      raw[px + 1] = p.g;
+      raw[px + 2] = p.b;
+      raw[px + 3] = p.a;
     }
   }
 

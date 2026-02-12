@@ -242,7 +242,7 @@ Text contrast checks do not stop at immediate parent fill. They use layered reso
 1. Transparent-aware ancestor and sibling-underlay traversal
 2. Metadata-fallback accumulated-bounds coverage checks
 3. Code-style-derived background hints (when code/text payload exists)
-4. Screenshot sampling around text bounds (PNG screenshot fallback)
+4. Screenshot sampling around text bounds using a Von Neumann neighborhood (PNG screenshot fallback)
 5. If still unresolved: `needs-manual-review` (no false hard-fail)
 
 Note:

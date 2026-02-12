@@ -57,7 +57,7 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
             ? `backgroundSource=${bgResolution.sourceLayerPath}`
             : undefined,
           !bgResolution.sourceLayerPath && sampledBg
-            ? "backgroundSource=[screenshot-sampling]"
+            ? "backgroundSource=[screenshot-von-neumann]"
             : undefined,
           bgResolution.reason ? `backgroundReason=${bgResolution.reason}` : undefined,
         ]
@@ -109,7 +109,7 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
           ? `backgroundSource=${bgResolution.sourceLayerPath}`
           : undefined,
         !bgResolution.sourceLayerPath && sampledBg
-          ? "backgroundSource=[screenshot-sampling]"
+          ? "backgroundSource=[screenshot-von-neumann]"
           : undefined,
       ]
         .filter(Boolean)

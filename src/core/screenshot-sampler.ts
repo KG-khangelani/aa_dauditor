@@ -14,6 +14,9 @@ interface DecodedPng {
   rgba: Uint8Array;
 }
 
+const SAMPLE_PAD_PX = 2;
+const VON_NEUMANN_RADIUS = 3;
+
 export function createScreenshotBackgroundSampler(
   target: NormalizedTarget,
   screenshot: FigmaTargetPayload["screenshot"] | undefined,
@@ -234,21 +237,20 @@ function sampleBackgroundAroundRect(
   const bottom = Math.ceil(bounds.y + bounds.height);
   const midX = Math.floor((left + right) / 2);
   const midY = Math.floor((top + bottom) / 2);
-  const pad = 2;
-
-  const points: Array<[number, number]> = [
-    [left - pad, midY],
-    [right + pad, midY],
-    [midX, top - pad],
-    [midX, bottom + pad],
-    [left - pad, top - pad],
-    [right + pad, top - pad],
-    [left - pad, bottom + pad],
-    [right + pad, bottom + pad],
+  const anchors: Array<[number, number]> = [
+    [left - SAMPLE_PAD_PX, midY],
+    [right + SAMPLE_PAD_PX, midY],
+    [midX, top - SAMPLE_PAD_PX],
+    [midX, bottom + SAMPLE_PAD_PX],
   ];
+  const points = expandVonNeumannPoints(anchors, VON_NEUMANN_RADIUS);
 
   const colors: NormalizedColor[] = [];
   for (const [x, y] of points) {
+    if (x >= left && x <= right && y >= top && y <= bottom) {
+      // Ignore samples that fall inside the text bounds.
+      continue;
+    }
     const clampedX = clamp(x, 0, image.width - 1);
     const clampedY = clamp(y, 0, image.height - 1);
     const color = samplePixel(image, clampedX, clampedY);
@@ -293,6 +295,26 @@ function samplePixel(image: DecodedPng, x: number, y: number): NormalizedColor |
     b: image.rgba[idx + 2],
     a: image.rgba[idx + 3] / 255,
   };
+}
+
+function expandVonNeumannPoints(
+  anchors: Array<[number, number]>,
+  radius: number,
+): Array<[number, number]> {
+  const out = new Map<string, [number, number]>();
+
+  for (const [ax, ay] of anchors) {
+    for (let dx = -radius; dx <= radius; dx += 1) {
+      const maxDy = radius - Math.abs(dx);
+      for (let dy = -maxDy; dy <= maxDy; dy += 1) {
+        const x = ax + dx;
+        const y = ay + dy;
+        out.set(`${x},${y}`, [x, y]);
+      }
+    }
+  }
+
+  return [...out.values()];
 }
 
 function rgbDistance(a: NormalizedColor, b: NormalizedColor): number {
