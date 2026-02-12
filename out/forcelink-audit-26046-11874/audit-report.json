@@ -1,231 +1,151 @@
 {
-  "runId": "674c34f8-49e7-41f2-8208-152ecf677389",
-  "startedAt": "2026-02-12T08:28:37.734Z",
-  "finishedAt": "2026-02-12T08:28:42.092Z",
+  "runId": "53750fd1-1997-4df2-a3ec-d1c874f24945",
+  "startedAt": "2026-02-12T08:47:52.528Z",
+  "finishedAt": "2026-02-12T08:47:55.687Z",
   "wcagVersion": "2.2",
   "level": "AA",
   "summary": {
     "totalTargets": 1,
-    "totalFindings": 9,
+    "totalFindings": 4,
     "suppressedFindings": 0,
-    "manualReviewFindings": 0,
+    "manualReviewFindings": 3,
     "bySeverity": {
       "blocker": 0,
-      "critical": 9,
+      "critical": 1,
       "major": 0,
       "minor": 0
     },
     "failedTargets": 1,
     "warnings": [
-      "Figma Node 26046:11874: get_design_context returned code/text payload; switching to metadata for layer traversal."
+      "Figma Node 1:7714: get_design_context returned code/text payload; switching to metadata for layer traversal."
     ]
   },
   "targets": [
     {
-      "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-      "nodeId": "26046:11874",
-      "frameName": "Figma Node 26046:11874",
-      "screenshotPath": "/Users/khangelani/Documents/aa_dauditor/out/forcelink-audit-26046-11874/assets/26046_11874.png",
+      "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+      "nodeId": "1:7714",
+      "frameName": "Figma Node 1:7714",
+      "screenshotPath": "/Users/khangelani/Documents/aa_dauditor/out/forcelink-audit-26046-11874/assets/1_7714.png",
       "findings": [
         {
-          "id": "b54d05d7aec5",
+          "id": "29673b3332d3",
           "ruleId": "WCAG-1.4.3-text-contrast-minimum",
           "wcagCriterion": "1.4.3",
           "severity": "critical",
           "status": "failed",
-          "message": "Text contrast ratio 2.04:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.91:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-          "evidence": "Node 26046:12047 (Start Label) | textColor=rgba(255, 232, 210, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+          "message": "Text contrast ratio 2.38:1 is below required 4.5:1.",
+          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-10 (#262626) -> 15.13:1 Fix B (replace background variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.32:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-10 (#262626) + bg Neutral Color Palette/neutral-1 (#FFFFFF) -> 15.13:1 Other passing foreground variables: Neutral Color Palette/neutral-10 (#262626, 15.13:1); Primary/Forcelink/primary-7 (#102B7C, 12.66:1).",
+          "evidence": "Node 4038:16028 (CT0159C - Commercial) | textColor=rgba(250, 140, 22, 1) | backgroundColor=rgba(255, 255, 255, 1) | backgroundSource=[screenshot-von-neumann]",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12047",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "4038:16028",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Customer Info Container > CT0159C - Commercial"
           }
         },
         {
-          "id": "3b9f5ca1b566",
+          "id": "e4146661aa28",
           "ruleId": "WCAG-1.4.3-text-contrast-minimum",
           "wcagCriterion": "1.4.3",
           "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 2.06:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.95:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-          "evidence": "Node 26046:12048 (Active) | textColor=rgba(255, 233, 209, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Orange/orange-2 (#FFE7BA); Base Color Palettes/Orange/orange-6 (#FA8C16); Base Color Palettes/Red/red-1 (#FFF1F0); Base Color Palettes/Red/red-6 (#F5222D); color (#BFBFBF).",
+          "evidence": "Node 4038:16035 (Vodacom) | backgroundSource=[screenshot-von-neumann] | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12048",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "4038:16035",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Contact Persons Container > Organisation Status Container > Organisation Info > Vodacom"
           }
         },
         {
-          "id": "6f6979017a88",
+          "id": "04fb2669bdd7",
           "ruleId": "WCAG-1.4.3-text-contrast-minimum",
           "wcagCriterion": "1.4.3",
           "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 2.06:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.95:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-          "evidence": "Node 26046:12050 (End Label) | textColor=rgba(255, 233, 209, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Orange/orange-2 (#FFE7BA); Base Color Palettes/Orange/orange-6 (#FA8C16); Base Color Palettes/Red/red-1 (#FFF1F0); Base Color Palettes/Red/red-6 (#F5222D); color (#BFBFBF).",
+          "evidence": "Node 4038:16037 (Status) | backgroundSource=[screenshot-von-neumann] | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12050",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "4038:16037",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Contact Persons Container > Organisation Status Container > Status Info > Status"
           }
         },
         {
-          "id": "61b0537d0456",
+          "id": "1d1799ccf751",
           "ruleId": "WCAG-1.4.3-text-contrast-minimum",
           "wcagCriterion": "1.4.3",
           "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 1.94:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.60:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-          "evidence": "Node 26046:12051 (Active) | textColor=rgba(255, 225, 194, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+          "status": "needs-manual-review",
+          "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+          "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Orange/orange-2 (#FFE7BA); Base Color Palettes/Orange/orange-6 (#FA8C16); Base Color Palettes/Red/red-1 (#FFF1F0); Base Color Palettes/Red/red-6 (#F5222D); color (#BFBFBF).",
+          "evidence": "Node 4038:16038 (Active) | backgroundSource=[screenshot-von-neumann] | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12051",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
-          }
-        },
-        {
-          "id": "daaa6a7cea69",
-          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-          "wcagCriterion": "1.4.3",
-          "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 1.52:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.52:1 Fix B (replace background variable): Primary/Forcelink/primary-7 (#102B7C) -> 6.54:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-8 (#595959) + bg Neutral Color Palette/neutral-4 (#F0F0F0) -> 6.15:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.52:1); Primary/Forcelink/primary-7 (#102B7C, 9.97:1); Neutral Color Palette/neutral-10 (#262626, 11.92:1).",
-          "evidence": "Node 26046:12073 (Start Label) | textColor=rgba(185, 184, 210, 1) | backgroundColor=rgba(228, 228, 230, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12073",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
-          }
-        },
-        {
-          "id": "b7660aef2916",
-          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-          "wcagCriterion": "1.4.3",
-          "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 1.54:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.58:1 Fix B (replace background variable): Primary/Forcelink/primary-7 (#102B7C) -> 6.56:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-8 (#595959) + bg Neutral Color Palette/neutral-4 (#F0F0F0) -> 6.15:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.58:1); Primary/Forcelink/primary-7 (#102B7C, 10.08:1); Neutral Color Palette/neutral-10 (#262626, 12.05:1).",
-          "evidence": "Node 26046:12074 (Active) | textColor=rgba(186, 184, 210, 1) | backgroundColor=rgba(229, 229, 233, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12074",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
-          }
-        },
-        {
-          "id": "9779995bd9ec",
-          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-          "wcagCriterion": "1.4.3",
-          "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 1.21:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.77:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-1 (#FFFFFF) + bg Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.77:1); Primary/Forcelink/primary-7 (#102B7C, 10.44:1); Neutral Color Palette/neutral-10 (#262626, 12.47:1).",
-          "evidence": "Node 26046:12076 (End Label) | textColor=rgba(255, 255, 255, 1) | backgroundColor=rgba(233, 233, 234, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12076",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
-          }
-        },
-        {
-          "id": "d87257f1321f",
-          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-          "wcagCriterion": "1.4.3",
-          "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 1.27:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.53:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-1 (#FFFFFF) + bg Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.53:1); Primary/Forcelink/primary-7 (#102B7C, 10.00:1); Neutral Color Palette/neutral-10 (#262626, 11.95:1).",
-          "evidence": "Node 26046:12077 (Active) | textColor=rgba(255, 255, 255, 1) | backgroundColor=rgba(229, 228, 231, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:12077",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
-          }
-        },
-        {
-          "id": "354878339a4a",
-          "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-          "wcagCriterion": "1.4.3",
-          "severity": "critical",
-          "status": "failed",
-          "message": "Text contrast ratio 3.69:1 is below required 4.5:1.",
-          "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-8 (#595959) + bg Neutral Color Palette/neutral-1 (#FFFFFF) -> 7.00:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 7.00:1); Primary/Forcelink/primary-7 (#102B7C, 12.66:1); Neutral Color Palette/neutral-10 (#262626, 15.13:1).",
-          "evidence": "Node 26097:293630 (0724418827) | textColor=rgba(133, 133, 133, 1) | backgroundColor=rgba(255, 255, 255, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-          "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26097:293630",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > 0724418827"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "4038:16038",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Contact Persons Container > Organisation Status Container > Status Info > Active"
           }
         }
       ],
       "manualChecks": [
         {
-          "id": "23573ab14085",
+          "id": "6395e09cd359",
           "wcagCriterion": "1.3.1",
           "prompt": "Verify structure and relationships are programmatically determinable (headings, grouped controls, labels).",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:11874",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Figma Node 26046:11874"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "1:7714",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Figma Node 1:7714"
           }
         },
         {
-          "id": "508ef8ab64eb",
+          "id": "8738df742147",
           "wcagCriterion": "1.4.1",
           "prompt": "Verify color is not the only means used to convey state or meaning.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:11874",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Figma Node 26046:11874"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "1:7714",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Figma Node 1:7714"
           }
         },
         {
-          "id": "861a1492e2b8",
+          "id": "7b693733e519",
           "wcagCriterion": "2.4.7",
           "prompt": "Verify focus indicators are clearly visible for all interactive components.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:11874",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Figma Node 26046:11874"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "1:7714",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Figma Node 1:7714"
           }
         },
         {
-          "id": "5bde23a9be4a",
+          "id": "6a12dc6659ad",
           "wcagCriterion": "2.4.11",
           "prompt": "Verify focused elements are not fully obscured by fixed/sticky UI.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:11874",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Figma Node 26046:11874"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "1:7714",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Figma Node 1:7714"
           }
         },
         {
-          "id": "f9bf3195f592",
+          "id": "044d11478b1e",
           "wcagCriterion": "3.3.2",
           "prompt": "Verify form controls include persistent labels/instructions and clear error guidance.",
           "targetRef": {
-            "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-            "nodeId": "26046:11874",
-            "frameName": "Figma Node 26046:11874",
-            "layerPath": "Figma Node 26046:11874"
+            "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+            "nodeId": "1:7714",
+            "frameName": "Figma Node 1:7714",
+            "layerPath": "Figma Node 1:7714"
           }
         }
       ],
@@ -236,204 +156,124 @@
   ],
   "findings": [
     {
-      "id": "b54d05d7aec5",
+      "id": "29673b3332d3",
       "ruleId": "WCAG-1.4.3-text-contrast-minimum",
       "wcagCriterion": "1.4.3",
       "severity": "critical",
       "status": "failed",
-      "message": "Text contrast ratio 2.04:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.91:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-      "evidence": "Node 26046:12047 (Start Label) | textColor=rgba(255, 232, 210, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+      "message": "Text contrast ratio 2.38:1 is below required 4.5:1.",
+      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-10 (#262626) -> 15.13:1 Fix B (replace background variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.32:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-10 (#262626) + bg Neutral Color Palette/neutral-1 (#FFFFFF) -> 15.13:1 Other passing foreground variables: Neutral Color Palette/neutral-10 (#262626, 15.13:1); Primary/Forcelink/primary-7 (#102B7C, 12.66:1).",
+      "evidence": "Node 4038:16028 (CT0159C - Commercial) | textColor=rgba(250, 140, 22, 1) | backgroundColor=rgba(255, 255, 255, 1) | backgroundSource=[screenshot-von-neumann]",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12047",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "4038:16028",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Customer Info Container > CT0159C - Commercial"
       }
     },
     {
-      "id": "3b9f5ca1b566",
+      "id": "e4146661aa28",
       "ruleId": "WCAG-1.4.3-text-contrast-minimum",
       "wcagCriterion": "1.4.3",
       "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 2.06:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.95:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-      "evidence": "Node 26046:12048 (Active) | textColor=rgba(255, 233, 209, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Orange/orange-2 (#FFE7BA); Base Color Palettes/Orange/orange-6 (#FA8C16); Base Color Palettes/Red/red-1 (#FFF1F0); Base Color Palettes/Red/red-6 (#F5222D); color (#BFBFBF).",
+      "evidence": "Node 4038:16035 (Vodacom) | backgroundSource=[screenshot-von-neumann] | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12048",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "4038:16035",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Contact Persons Container > Organisation Status Container > Organisation Info > Vodacom"
       }
     },
     {
-      "id": "6f6979017a88",
+      "id": "04fb2669bdd7",
       "ruleId": "WCAG-1.4.3-text-contrast-minimum",
       "wcagCriterion": "1.4.3",
       "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 2.06:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.95:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-      "evidence": "Node 26046:12050 (End Label) | textColor=rgba(255, 233, 209, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Orange/orange-2 (#FFE7BA); Base Color Palettes/Orange/orange-6 (#FA8C16); Base Color Palettes/Red/red-1 (#FFF1F0); Base Color Palettes/Red/red-6 (#F5222D); color (#BFBFBF).",
+      "evidence": "Node 4038:16037 (Status) | backgroundSource=[screenshot-von-neumann] | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12050",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "4038:16037",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Contact Persons Container > Organisation Status Container > Status Info > Status"
       }
     },
     {
-      "id": "61b0537d0456",
+      "id": "1d1799ccf751",
       "ruleId": "WCAG-1.4.3-text-contrast-minimum",
       "wcagCriterion": "1.4.3",
       "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 1.94:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Primary/Forcelink/primary-7 (#102B7C) -> 5.23:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 5.60:1 Fix C (replace both with variables): fg Base Color Palettes/Orange/orange-1 (#FFF7E6) + bg Neutral Color Palette/neutral-8 (#595959) -> 6.57:1 Other passing foreground variables: Primary/Forcelink/primary-7 (#102B7C, 5.23:1); Neutral Color Palette/neutral-10 (#262626, 6.25:1).",
-      "evidence": "Node 26046:12051 (Active) | textColor=rgba(255, 225, 194, 1) | backgroundColor=rgba(255, 134, 13, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time",
+      "status": "needs-manual-review",
+      "message": "Could not reliably determine text/background colors for contrast calculation (text foreground color).",
+      "recommendation": "Contrast data unavailable. Start review using design-system variable tokens: Base Color Palettes/Orange/orange-2 (#FFE7BA); Base Color Palettes/Orange/orange-6 (#FA8C16); Base Color Palettes/Red/red-1 (#FFF1F0); Base Color Palettes/Red/red-6 (#F5222D); color (#BFBFBF).",
+      "evidence": "Node 4038:16038 (Active) | backgroundSource=[screenshot-von-neumann] | backgroundReason=No solid ancestor background found (transparent/image/gradient context).",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12051",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
-      }
-    },
-    {
-      "id": "daaa6a7cea69",
-      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-      "wcagCriterion": "1.4.3",
-      "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 1.52:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.52:1 Fix B (replace background variable): Primary/Forcelink/primary-7 (#102B7C) -> 6.54:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-8 (#595959) + bg Neutral Color Palette/neutral-4 (#F0F0F0) -> 6.15:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.52:1); Primary/Forcelink/primary-7 (#102B7C, 9.97:1); Neutral Color Palette/neutral-10 (#262626, 11.92:1).",
-      "evidence": "Node 26046:12073 (Start Label) | textColor=rgba(185, 184, 210, 1) | backgroundColor=rgba(228, 228, 230, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12073",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Start Label"
-      }
-    },
-    {
-      "id": "b7660aef2916",
-      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-      "wcagCriterion": "1.4.3",
-      "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 1.54:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.58:1 Fix B (replace background variable): Primary/Forcelink/primary-7 (#102B7C) -> 6.56:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-8 (#595959) + bg Neutral Color Palette/neutral-4 (#F0F0F0) -> 6.15:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.58:1); Primary/Forcelink/primary-7 (#102B7C, 10.08:1); Neutral Color Palette/neutral-10 (#262626, 12.05:1).",
-      "evidence": "Node 26046:12074 (Active) | textColor=rgba(186, 184, 210, 1) | backgroundColor=rgba(229, 229, 233, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12074",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry Start > Active"
-      }
-    },
-    {
-      "id": "9779995bd9ec",
-      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-      "wcagCriterion": "1.4.3",
-      "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 1.21:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.77:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-1 (#FFFFFF) + bg Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.77:1); Primary/Forcelink/primary-7 (#102B7C, 10.44:1); Neutral Color Palette/neutral-10 (#262626, 12.47:1).",
-      "evidence": "Node 26046:12076 (End Label) | textColor=rgba(255, 255, 255, 1) | backgroundColor=rgba(233, 233, 234, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12076",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > End Label"
-      }
-    },
-    {
-      "id": "d87257f1321f",
-      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-      "wcagCriterion": "1.4.3",
-      "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 1.27:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 5.53:1 Fix B (replace background variable): Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-1 (#FFFFFF) + bg Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 5.53:1); Primary/Forcelink/primary-7 (#102B7C, 10.00:1); Neutral Color Palette/neutral-10 (#262626, 11.95:1).",
-      "evidence": "Node 26046:12077 (Active) | textColor=rgba(255, 255, 255, 1) | backgroundColor=rgba(229, 228, 231, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:12077",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Shift History > Shift History Content > Shift History Entry > Shift History Entry Time > Shift History Entry End > Active"
-      }
-    },
-    {
-      "id": "354878339a4a",
-      "ruleId": "WCAG-1.4.3-text-contrast-minimum",
-      "wcagCriterion": "1.4.3",
-      "severity": "critical",
-      "status": "failed",
-      "message": "Text contrast ratio 3.69:1 is below required 4.5:1.",
-      "recommendation": "Variable-aware fix suggestions: Fix A (replace foreground variable): Neutral Color Palette/neutral-8 (#595959) -> 7.00:1 Fix C (replace both with variables): fg Neutral Color Palette/neutral-8 (#595959) + bg Neutral Color Palette/neutral-1 (#FFFFFF) -> 7.00:1 Other passing foreground variables: Neutral Color Palette/neutral-8 (#595959, 7.00:1); Primary/Forcelink/primary-7 (#102B7C, 12.66:1); Neutral Color Palette/neutral-10 (#262626, 15.13:1).",
-      "evidence": "Node 26097:293630 (0724418827) | textColor=rgba(133, 133, 133, 1) | backgroundColor=rgba(255, 255, 255, 1) | foregroundSource=[screenshot-text-region] | backgroundSource=[screenshot-von-neumann]",
-      "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26097:293630",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Tracking Map - sideOpen > Resource-single-selection-quick-menu > Resource Quick Menu > Resource Quick Menu Content > Resource Quick Menu Mobile Number > 0724418827"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "4038:16038",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Work Order Options – 1 > Customer Details > Customer Details 3 > Customer Details Container > Contact Persons Container > Organisation Status Container > Status Info > Active"
       }
     }
   ],
   "manualChecks": [
     {
-      "id": "23573ab14085",
+      "id": "6395e09cd359",
       "wcagCriterion": "1.3.1",
       "prompt": "Verify structure and relationships are programmatically determinable (headings, grouped controls, labels).",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:11874",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Figma Node 26046:11874"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "1:7714",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Figma Node 1:7714"
       }
     },
     {
-      "id": "508ef8ab64eb",
+      "id": "8738df742147",
       "wcagCriterion": "1.4.1",
       "prompt": "Verify color is not the only means used to convey state or meaning.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:11874",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Figma Node 26046:11874"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "1:7714",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Figma Node 1:7714"
       }
     },
     {
-      "id": "5bde23a9be4a",
+      "id": "6a12dc6659ad",
       "wcagCriterion": "2.4.11",
       "prompt": "Verify focused elements are not fully obscured by fixed/sticky UI.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:11874",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Figma Node 26046:11874"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "1:7714",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Figma Node 1:7714"
       }
     },
     {
-      "id": "861a1492e2b8",
+      "id": "7b693733e519",
       "wcagCriterion": "2.4.7",
       "prompt": "Verify focus indicators are clearly visible for all interactive components.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:11874",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Figma Node 26046:11874"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "1:7714",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Figma Node 1:7714"
       }
     },
     {
-      "id": "f9bf3195f592",
+      "id": "044d11478b1e",
       "wcagCriterion": "3.3.2",
       "prompt": "Verify form controls include persistent labels/instructions and clear error guidance.",
       "targetRef": {
-        "figmaUrl": "https://www.figma.com/design/hmsHl4RKNQLPsvL7ectyrO/Forcelink-Back-Office?node-id=26046-11874&t=ytSBaUfO62enqpMl-4",
-        "nodeId": "26046:11874",
-        "frameName": "Figma Node 26046:11874",
-        "layerPath": "Figma Node 26046:11874"
+        "figmaUrl": "https://www.figma.com/design/1IYvr500F7sW66yRHJv8XF/Forcelink-Mobile?node-id=1-7714&t=audL02OBEG23gJty-4",
+        "nodeId": "1:7714",
+        "frameName": "Figma Node 1:7714",
+        "layerPath": "Figma Node 1:7714"
       }
     }
   ]
