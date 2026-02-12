@@ -125,6 +125,10 @@ export interface RuleEvaluationContext {
     node: NormalizedNode,
     foreground?: NormalizedColor,
   ) => NormalizedColor | undefined;
+  sampleForegroundColor?: (
+    node: NormalizedNode,
+    background?: NormalizedColor,
+  ) => NormalizedColor | undefined;
 }
 
 export interface RuleDefinition {

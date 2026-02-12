@@ -8,7 +8,10 @@ import { writeJsonReport } from "../report/json.js";
 import { executeRules, RULES } from "../rules/index.js";
 import { shouldFailBuild, severitySortValue } from "../severity/policy.js";
 import { applySuppressions } from "../suppressions/apply.js";
-import { createScreenshotBackgroundSampler } from "./screenshot-sampler.js";
+import {
+  createScreenshotBackgroundSampler,
+  createScreenshotForegroundSampler,
+} from "./screenshot-sampler.js";
 import type {
   AuditReport,
   AuditProgressEvent,
@@ -95,6 +98,10 @@ export async function runAudit(
         normalized,
         payload.screenshot,
       );
+      const sampleForegroundColor = createScreenshotForegroundSampler(
+        normalized,
+        payload.screenshot,
+      );
 
       let screenshotPath: string | undefined;
       if (options.config.report.includeScreenshots) {
@@ -118,6 +125,7 @@ export async function runAudit(
           reportStartIso: startedAt,
           designSystemColors,
           sampleBackgroundColor,
+          sampleForegroundColor,
         },
         enabledRules,
       );

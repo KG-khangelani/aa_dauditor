@@ -14,6 +14,14 @@ interface DecodedPng {
   rgba: Uint8Array;
 }
 
+interface SamplingContext {
+  image: DecodedPng;
+  accumulated: Map<string, NormalizedBounds>;
+  rootBounds: NormalizedBounds;
+  scaleX: number;
+  scaleY: number;
+}
+
 const SAMPLE_PAD_PX = 2;
 const VON_NEUMANN_RADIUS = 3;
 
@@ -21,35 +29,57 @@ export function createScreenshotBackgroundSampler(
   target: NormalizedTarget,
   screenshot: FigmaTargetPayload["screenshot"] | undefined,
 ): ((node: NormalizedNode, foreground?: NormalizedColor) => NormalizedColor | undefined) | undefined {
-  if (!screenshot?.bytes || screenshot.ext !== "png") {
-    return undefined;
-  }
-
-  const decoded = decodePng(screenshot.bytes);
-  if (!decoded) {
-    return undefined;
-  }
-
-  const map = nodeMap(target);
-  const accumulated = accumulatedBoundsById(target, map);
-  const rootBounds = accumulated.get(target.nodeId);
-  if (!rootBounds) {
+  const context = createSamplingContext(target, screenshot);
+  if (!context) {
     return undefined;
   }
 
   return (node: NormalizedNode, foreground?: NormalizedColor): NormalizedColor | undefined => {
-    const absolute = accumulated.get(node.id);
+    const absolute = context.accumulated.get(node.id);
     if (!absolute) {
       return undefined;
     }
     const local: NormalizedBounds = {
-      x: absolute.x - rootBounds.x,
-      y: absolute.y - rootBounds.y,
+      x: absolute.x - context.rootBounds.x,
+      y: absolute.y - context.rootBounds.y,
       width: absolute.width,
       height: absolute.height,
     };
 
-    return sampleBackgroundAroundRect(decoded, local, foreground);
+    return sampleBackgroundAroundRect(
+      context.image,
+      scaleBounds(local, context.scaleX, context.scaleY),
+      foreground,
+    );
+  };
+}
+
+export function createScreenshotForegroundSampler(
+  target: NormalizedTarget,
+  screenshot: FigmaTargetPayload["screenshot"] | undefined,
+): ((node: NormalizedNode, background?: NormalizedColor) => NormalizedColor | undefined) | undefined {
+  const context = createSamplingContext(target, screenshot);
+  if (!context) {
+    return undefined;
+  }
+
+  return (node: NormalizedNode, background?: NormalizedColor): NormalizedColor | undefined => {
+    const absolute = context.accumulated.get(node.id);
+    if (!absolute) {
+      return undefined;
+    }
+    const local: NormalizedBounds = {
+      x: absolute.x - context.rootBounds.x,
+      y: absolute.y - context.rootBounds.y,
+      width: absolute.width,
+      height: absolute.height,
+    };
+
+    return sampleForegroundInsideRect(
+      context.image,
+      scaleBounds(local, context.scaleX, context.scaleY),
+      background,
+    );
   };
 }
 
@@ -284,6 +314,66 @@ function sampleBackgroundAroundRect(
   return best?.color;
 }
 
+function sampleForegroundInsideRect(
+  image: DecodedPng,
+  bounds: NormalizedBounds,
+  background?: NormalizedColor,
+): NormalizedColor | undefined {
+  const left = clamp(Math.floor(bounds.x), 0, image.width - 1);
+  const top = clamp(Math.floor(bounds.y), 0, image.height - 1);
+  const right = clamp(Math.ceil(bounds.x + bounds.width), 0, image.width - 1);
+  const bottom = clamp(Math.ceil(bounds.y + bounds.height), 0, image.height - 1);
+
+  if (right <= left || bottom <= top) {
+    return undefined;
+  }
+
+  const buckets = new Map<string, { count: number; color: NormalizedColor }>();
+  for (let y = top; y <= bottom; y += 1) {
+    for (let x = left; x <= right; x += 1) {
+      const color = samplePixel(image, x, y);
+      if (!color || color.a < 0.1) {
+        continue;
+      }
+      if (background && rgbDistance(color, background) < 16) {
+        continue;
+      }
+
+      const key = `${Math.round(color.r / 8)}-${Math.round(color.g / 8)}-${Math.round(
+        color.b / 8,
+      )}`;
+      const current = buckets.get(key);
+      if (!current) {
+        buckets.set(key, { count: 1, color });
+        continue;
+      }
+      current.count += 1;
+    }
+  }
+
+  const candidates = [...buckets.values()];
+  if (candidates.length === 0) {
+    return undefined;
+  }
+
+  if (background) {
+    const sorted = candidates.sort((a, b) => {
+      const distanceDiff =
+        rgbDistance(b.color, background) - rgbDistance(a.color, background);
+      if (Math.abs(distanceDiff) > 0.001) {
+        return distanceDiff;
+      }
+      return b.count - a.count;
+    });
+
+    const contrastCandidate = sorted.find((entry) => entry.count >= 2);
+    return (contrastCandidate ?? sorted[0]).color;
+  }
+
+  const best = candidates.sort((a, b) => b.count - a.count)[0];
+  return best.color;
+}
+
 function samplePixel(image: DecodedPng, x: number, y: number): NormalizedColor | undefined {
   if (x < 0 || y < 0 || x >= image.width || y >= image.height) {
     return undefined;
@@ -326,4 +416,46 @@ function rgbDistance(a: NormalizedColor, b: NormalizedColor): number {
 
 function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
+}
+
+function createSamplingContext(
+  target: NormalizedTarget,
+  screenshot: FigmaTargetPayload["screenshot"] | undefined,
+): SamplingContext | undefined {
+  if (!screenshot?.bytes || screenshot.ext !== "png") {
+    return undefined;
+  }
+
+  const decoded = decodePng(screenshot.bytes);
+  if (!decoded) {
+    return undefined;
+  }
+
+  const map = nodeMap(target);
+  const accumulated = accumulatedBoundsById(target, map);
+  const rootBounds = accumulated.get(target.nodeId);
+  if (!rootBounds) {
+    return undefined;
+  }
+
+  return {
+    image: decoded,
+    accumulated,
+    rootBounds,
+    scaleX: rootBounds.width > 0 ? decoded.width / rootBounds.width : 1,
+    scaleY: rootBounds.height > 0 ? decoded.height / rootBounds.height : 1,
+  };
+}
+
+function scaleBounds(
+  bounds: NormalizedBounds,
+  scaleX: number,
+  scaleY: number,
+): NormalizedBounds {
+  return {
+    x: bounds.x * scaleX,
+    y: bounds.y * scaleY,
+    width: bounds.width * scaleX,
+    height: bounds.height * scaleY,
+  };
 }

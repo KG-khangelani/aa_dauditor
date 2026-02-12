@@ -242,7 +242,7 @@ Text contrast checks do not stop at immediate parent fill. They use layered reso
 1. Transparent-aware ancestor and sibling-underlay traversal
 2. Metadata-fallback accumulated-bounds coverage checks
 3. Code-style-derived background hints (when code/text payload exists)
-4. Screenshot sampling around text bounds using a Von Neumann neighborhood (PNG screenshot fallback)
+4. Screenshot sampling around text bounds using a Von Neumann neighborhood (PNG screenshot fallback for unresolved background and/or foreground)
 5. If still unresolved: `needs-manual-review` (no false hard-fail)
 
 Note:
@@ -255,16 +255,23 @@ flowchart TD
   A[Text node] --> B[Resolve foreground fill]
   B --> C[Resolve effective background via traversal]
   C --> D{Background found?}
-  D -- yes --> I[Compute contrast ratio]
+  D -- yes --> D2{Foreground found?}
   D -- no --> E{Document bg hint available?}
-  E -- yes --> I
+  E -- yes --> D2
   E -- no --> F{Screenshot sampler available?}
-  F -- yes --> G[Sample surrounding pixels]
-  G --> H{Sample usable?}
-  H -- yes --> I
-  H -- no --> J[Manual review finding]
+  F -- yes --> G[Sample Von Neumann neighborhood around text]
+  G --> G2{Background sample usable?}
+  G2 -- yes --> D2
+  G2 -- no --> J[Manual review finding]
   F -- no --> J
   E -- no --> F
+  D2 -- yes --> I[Compute contrast ratio]
+  D2 -- no --> D3{Foreground sampler available?}
+  D3 -- yes --> D4[Sample dominant text-like color in text bounds]
+  D4 --> D5{Foreground sample usable?}
+  D5 -- yes --> I
+  D5 -- no --> J
+  D3 -- no --> J
   I --> K{Pass threshold?}
   K -- yes --> L[No finding]
   K -- no --> M[Failed finding + variable-aware fix suggestion]

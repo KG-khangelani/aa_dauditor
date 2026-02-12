@@ -961,18 +961,14 @@ async function parseScreenshotPayload(
 
   const record = payload as Record<string, unknown>;
 
-  if (typeof record.sourceUrl === "string") {
-    return {
-      sourceUrl: record.sourceUrl,
-    };
-  }
-
   const url =
-    typeof record.url === "string"
-      ? record.url
-      : typeof record.imageUrl === "string"
-        ? record.imageUrl
-        : undefined;
+    typeof record.sourceUrl === "string"
+      ? record.sourceUrl
+      : typeof record.url === "string"
+        ? record.url
+        : typeof record.imageUrl === "string"
+          ? record.imageUrl
+          : undefined;
 
   if (url) {
     try {

@@ -28,13 +28,22 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
   const findings: Finding[] = [];
 
   for (const node of likelyTextNodes(ctx.target)) {
-    const fg = firstFill(node);
+    const directFg = firstFill(node);
     const bgResolution = resolveEffectiveBackground(ctx.target, node);
+    const usesDocumentFallbackBackground = Boolean(
+      bgResolution.sourceLayerPath?.startsWith("[design-context-fallback]"),
+    );
     const sampledBg =
-      !bgResolution.color && ctx.sampleBackgroundColor && fg
-        ? ctx.sampleBackgroundColor(node, fg)
+      ctx.sampleBackgroundColor &&
+      (!bgResolution.color || usesDocumentFallbackBackground)
+        ? ctx.sampleBackgroundColor(node, directFg)
         : undefined;
-    const bg = bgResolution.color ?? sampledBg;
+    const bg = sampledBg ?? bgResolution.color;
+    const sampledFg =
+      !directFg && bg && ctx.sampleForegroundColor
+        ? ctx.sampleForegroundColor(node, bg)
+        : undefined;
+    const fg = directFg ?? sampledFg;
     const layerPath = layerPathForNode(ctx.target, node);
 
     if (!fg || !bg) {
@@ -53,12 +62,12 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
         ),
         evidence: [
           `Node ${node.id} (${node.name})`,
-          bgResolution.sourceLayerPath
+          sampledBg
+            ? "backgroundSource=[screenshot-von-neumann]"
+            : bgResolution.sourceLayerPath
             ? `backgroundSource=${bgResolution.sourceLayerPath}`
             : undefined,
-          !bgResolution.sourceLayerPath && sampledBg
-            ? "backgroundSource=[screenshot-von-neumann]"
-            : undefined,
+          sampledFg ? "foregroundSource=[screenshot-text-region]" : undefined,
           bgResolution.reason ? `backgroundReason=${bgResolution.reason}` : undefined,
         ]
           .filter(Boolean)
@@ -105,11 +114,11 @@ function evaluateTextContrast(ctx: RuleEvaluationContext): Finding[] {
         `Node ${node.id} (${node.name})`,
         `textColor=${colorToString(fg)}`,
         `backgroundColor=${colorToString(bg)}`,
-        bgResolution.sourceLayerPath
-          ? `backgroundSource=${bgResolution.sourceLayerPath}`
-          : undefined,
-        !bgResolution.sourceLayerPath && sampledBg
+        sampledFg ? "foregroundSource=[screenshot-text-region]" : undefined,
+        sampledBg
           ? "backgroundSource=[screenshot-von-neumann]"
+          : bgResolution.sourceLayerPath
+          ? `backgroundSource=${bgResolution.sourceLayerPath}`
           : undefined,
       ]
         .filter(Boolean)

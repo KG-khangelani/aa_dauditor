@@ -1,7 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { deflateSync } from "node:zlib";
-import { createScreenshotBackgroundSampler } from "../src/core/screenshot-sampler.js";
+import {
+  createScreenshotBackgroundSampler,
+  createScreenshotForegroundSampler,
+} from "../src/core/screenshot-sampler.js";
 import type { NormalizedTarget } from "../src/core/types.js";
 
 test("createScreenshotBackgroundSampler samples background around text bounds", () => {
@@ -95,6 +98,177 @@ test("createScreenshotBackgroundSampler ignores diagonal-only corner pixels arou
   const node = target.nodes.find((entry) => entry.id === "1:2")!;
   const sampled = sampler!(node, node.fills[0]);
   assert.equal(sampled, undefined);
+});
+
+test("createScreenshotForegroundSampler picks dominant text-like color inside text bounds", () => {
+  const pngBytes = buildPng(24, 24, (x, y) => {
+    const inTextGlyph = x >= 9 && x <= 14 && y >= 10 && y <= 13;
+    if (inTextGlyph) {
+      return { r: 16, g: 43, b: 124, a: 255 };
+    }
+    return { r: 248, g: 249, b: 250, a: 255 };
+  });
+
+  const target: NormalizedTarget = {
+    figmaUrl: "https://www.figma.com/file/demo?node-id=1-1",
+    nodeId: "1:1",
+    frameName: "Demo",
+    warnings: [],
+    nodes: [
+      {
+        id: "1:1",
+        name: "Root",
+        type: "FRAME",
+        bounds: { x: 0, y: 0, width: 24, height: 24 },
+        fills: [],
+        strokes: [],
+        isInteractive: false,
+      },
+      {
+        id: "1:2",
+        parentId: "1:1",
+        name: "A6 KwaZamani Farm",
+        type: "TEXT",
+        bounds: { x: 8, y: 9, width: 8, height: 6 },
+        fills: [],
+        strokes: [],
+        text: "A6 KwaZamani Farm",
+        isInteractive: false,
+      },
+    ],
+  };
+
+  const sampler = createScreenshotForegroundSampler(target, {
+    bytes: pngBytes,
+    ext: "png",
+  });
+  assert.ok(sampler);
+
+  const node = target.nodes.find((entry) => entry.id === "1:2")!;
+  const sampled = sampler!(node, { r: 248, g: 249, b: 250, a: 1 });
+  assert.ok(sampled);
+  assert.equal(sampled?.r, 16);
+  assert.equal(sampled?.g, 43);
+  assert.equal(sampled?.b, 124);
+});
+
+test("screenshot samplers account for screenshot-to-node scale factor", () => {
+  const pngBytes = buildPng(48, 48, (x, y) => {
+    const inScaledGlyph = x >= 18 && x <= 29 && y >= 20 && y <= 27;
+    if (inScaledGlyph) {
+      return { r: 16, g: 43, b: 124, a: 255 };
+    }
+    return { r: 248, g: 249, b: 250, a: 255 };
+  });
+
+  const target: NormalizedTarget = {
+    figmaUrl: "https://www.figma.com/file/demo?node-id=1-1",
+    nodeId: "1:1",
+    frameName: "Demo",
+    warnings: [],
+    nodes: [
+      {
+        id: "1:1",
+        name: "Root",
+        type: "FRAME",
+        bounds: { x: 0, y: 0, width: 24, height: 24 },
+        fills: [],
+        strokes: [],
+        isInteractive: false,
+      },
+      {
+        id: "1:2",
+        parentId: "1:1",
+        name: "A6 KwaZamani Farm",
+        type: "TEXT",
+        bounds: { x: 9, y: 10, width: 6, height: 4 },
+        fills: [],
+        strokes: [],
+        text: "A6 KwaZamani Farm",
+        isInteractive: false,
+      },
+    ],
+  };
+
+  const fgSampler = createScreenshotForegroundSampler(target, {
+    bytes: pngBytes,
+    ext: "png",
+  });
+  assert.ok(fgSampler);
+
+  const node = target.nodes.find((entry) => entry.id === "1:2")!;
+  const sampledFg = fgSampler!(node, { r: 248, g: 249, b: 250, a: 1 });
+  assert.ok(sampledFg);
+  assert.equal(sampledFg?.r, 16);
+  assert.equal(sampledFg?.g, 43);
+  assert.equal(sampledFg?.b, 124);
+
+  const bgSampler = createScreenshotBackgroundSampler(target, {
+    bytes: pngBytes,
+    ext: "png",
+  });
+  assert.ok(bgSampler);
+  const sampledBg = bgSampler!(node, sampledFg);
+  assert.ok(sampledBg);
+  assert.equal(sampledBg?.r, 248);
+  assert.equal(sampledBg?.g, 249);
+  assert.equal(sampledBg?.b, 250);
+});
+
+test("foreground sampler prefers higher-contrast glyph color over low-contrast antialias color", () => {
+  const pngBytes = buildPng(24, 24, (x, y) => {
+    if (x >= 10 && x <= 12 && y >= 10 && y <= 12) {
+      // Simulated core glyph color.
+      return { r: 119, g: 119, b: 119, a: 255 };
+    }
+    if (x >= 8 && x <= 15 && y >= 9 && y <= 14) {
+      // Simulated anti-aliased text edge color.
+      return { r: 228, g: 223, b: 217, a: 255 };
+    }
+    return { r: 255, g: 249, b: 243, a: 255 };
+  });
+
+  const target: NormalizedTarget = {
+    figmaUrl: "https://www.figma.com/file/demo?node-id=1-1",
+    nodeId: "1:1",
+    frameName: "Demo",
+    warnings: [],
+    nodes: [
+      {
+        id: "1:1",
+        name: "Root",
+        type: "FRAME",
+        bounds: { x: 0, y: 0, width: 24, height: 24 },
+        fills: [],
+        strokes: [],
+        isInteractive: false,
+      },
+      {
+        id: "1:2",
+        parentId: "1:1",
+        name: "A6 KwaZamani Farm",
+        type: "TEXT",
+        bounds: { x: 8, y: 9, width: 8, height: 6 },
+        fills: [],
+        strokes: [],
+        text: "A6 KwaZamani Farm",
+        isInteractive: false,
+      },
+    ],
+  };
+
+  const sampler = createScreenshotForegroundSampler(target, {
+    bytes: pngBytes,
+    ext: "png",
+  });
+  assert.ok(sampler);
+
+  const node = target.nodes.find((entry) => entry.id === "1:2")!;
+  const sampled = sampler!(node, { r: 255, g: 249, b: 243, a: 1 });
+  assert.ok(sampled);
+  assert.equal(sampled?.r, 119);
+  assert.equal(sampled?.g, 119);
+  assert.equal(sampled?.b, 119);
 });
 
 function buildSolidPng(
